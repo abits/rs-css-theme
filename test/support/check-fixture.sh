@@ -7,6 +7,7 @@ dir="$1"; build="$2"; out="$3"; envname="$4"; raised="$5"
 support="$(cd "$(dirname "$0")" && pwd)"; status=0
 cd "$dir" || exit 2
 for label in default raised; do
+  [ "${ONLY_RAISED:-}" = 1 ] && [ "$label" = default ] && continue
   value=""; [ "$label" = raised ] && value="$raised"
   rm -rf "$out"
   env "$envname=$value" NEXT_TELEMETRY_DISABLED=1 NUXT_TELEMETRY_DISABLED=1 bash -c "$build" >"/tmp/claude-0/build-$label.log" 2>&1 \
