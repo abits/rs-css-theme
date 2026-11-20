@@ -17,3 +17,11 @@ Thumbs.db
 # Tool output (Playwright MCP, MCP server logs)
 .playwright-mcp/
 logs/
+
+# Prototype and test fixtures
+node_modules/
+test/fixtures/*/dist/
+test/fixtures/*/.nuxt/
+test/fixtures/*/.output/
+test/fixtures/*/.next/
+test/.out/
