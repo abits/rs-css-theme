@@ -24,12 +24,26 @@ A look SHALL define every token of the contract in both light and dark mode. The
 
 ### Requirement: Look is swappable through one import
 
-A site SHALL switch from one look to another by changing a single CSS import. The switch SHALL NOT require changes to markup, components or build configuration.
+A site SHALL switch from one look to another by changing a single CSS import. The switch SHALL NOT require changes to markup, components or build configuration, beyond the one-time host setting of the requirement "Host CSS target".
 
 #### Scenario: Swap the look
 
 - **WHEN** a site replaces the import of one look with the import of another look
 - **THEN** all contract utilities in that site resolve to the values of the new look
+
+### Requirement: Host CSS target
+
+The host's CSS build SHALL target at least Chrome 123, Firefox 120 and Safari 17.5, the first versions with `light-dark()`. The package SHALL document the setting for each supported host, because a host that targets older browsers rewrites `light-dark()` into a fallback that renders no colors.
+
+#### Scenario: Host with a raised CSS target
+
+- **WHEN** the host's CSS build targets at least Chrome 123, Firefox 120 and Safari 17.5
+- **THEN** the built CSS keeps `light-dark()` and the contract color utilities resolve in light and dark mode
+
+#### Scenario: Host with the default CSS target of an older release
+
+- **WHEN** the host's CSS build targets older browsers than the baseline
+- **THEN** the configuration is unsupported, and the README names the setting that fixes it
 
 ### Requirement: Mode follows color-scheme
 

@@ -25,3 +25,4 @@ test/fixtures/*/.nuxt/
 test/fixtures/*/.output/
 test/fixtures/*/.next/
 test/.out/
+test/fixtures/*/out/

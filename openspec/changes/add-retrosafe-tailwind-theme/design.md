@@ -61,21 +61,42 @@ be darker than the reference's `#858585`, which reaches only about 3.7:1 on
 `#fefefe`. Both ratios are my calculation and are verified by the contrast
 test.
 
+**7. The host raises its CSS build target to the `light-dark()` baseline.**
+Prototypes in Vite 8.3.8 (Vue, React, AlpineJS), Nuxt and Next 16.4.6 showed
+the same failure with default settings: the host's CSS minifier (Lightning
+CSS) targets older browsers and rewrites `light-dark()` into a
+`--lightningcss-light/-dark` fallback. That fallback renders nothing when the
+value sits in a custom property, as it does in `@theme`. Tailwind itself is
+not the cause, because its own Lightning CSS call excludes the `LightDark`
+feature. Raising the target to Chrome 123, Safari 17.5 and Firefox 120 makes
+all five fixtures pass in light and dark. The setting differs per host: Vite
+and Nuxt use `build.cssTarget`, Next uses `browserslist`. Alternatives:
+selectors for the mode (the package would own the mode mechanism) and the
+two-layer variable pattern (the same rewrite applies, so it does not help).
+The cost is that the one-import swap needs a one-time host setting.
+
 ## Risks / Trade-offs
 
-- **`light-dark()` inside `@theme` is unverified.** The Tailwind docs show only
-  a two-layer pattern for mode-dependent colors (raw variables plus
-  `@theme inline`, `colors.mdx`). → The first task is a prototype. If it
-  fails, switch the look files to the two-layer pattern; specs stay valid
-  because they describe utilities, not variable names.
-- **`@import` of a package file may resolve differently per host.** → A
-  prototype per host before the first release.
+- **`light-dark()` inside `@theme` works** when the CSS reaches the browser
+  unchanged: a single layer is enough (prototype 1.1, all hosts). The Tailwind
+  docs only show the two-layer pattern, and the two-layer fallback is not
+  needed.
+- **A host with older CSS targets silently renders no colors.** The page
+  shows transparent backgrounds and default text colors. → Document the
+  per-host setting in the README and keep the fixtures as regression checks.
+  Newer host versions may raise their default target over time; that is
+  unverified.
+- **`@import` of a package file resolves in all five hosts** when the package
+  is a real copy in `node_modules` with `exports` for `looks/*.css` (prototypes
+  1.3 and 1.4). Next with Turbopack rejects a symlinked package outside the
+  project root, which only affects linked development setups.
 - **Unused theme variables are not emitted by default** (`theme.mdx`, "Generating
   all CSS variables"). → Use `@theme static` if a host reads variables
   directly instead of through utilities.
-- **Browser baseline is approximate.** Roughly Chrome 123, Firefox 120 and
-  Safari 17.5 from memory. → Confirm against MDN and fix the numbers in the
-  README.
+- **Browser baseline:** `light-dark()` is supported from Chrome 123 (Edge
+  follows Chrome), Firefox 120 and Safari 17.5, according to the MDN browser
+  compatibility data. Colors only; `light-dark()` with `<image>` values needs
+  much newer browsers and is not used.
 - **Hosts that switch mode with a class** must keep `color-scheme` and their
   own `dark` variant in sync. → Document it in the README.
 
