@@ -15,7 +15,11 @@ Earlier releases: see [CHANGELOG.md](CHANGELOG.md).
 
 ### Install
 
-The package is not published to npm yet. Until the first release, depend on a local checkout:
+The package is not published to npm. Install a release from its git tag, which needs read access to the GitHub repository:
+
+    npm install --allow-git=root github:abits/ts-css-theme#v0.1.0
+
+npm 12 and later block git dependencies unless you pass `--allow-git`. To work on the package itself, depend on a local checkout instead:
 
     npm install --install-links file:../ts-css-theme
 
