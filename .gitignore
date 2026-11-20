@@ -20,7 +20,7 @@ logs/
 
 # Prototype and test fixtures
 node_modules/
-test/fixtures/*/dist/
+test/fixtures/*/dist
 test/fixtures/*/.nuxt/
 test/fixtures/*/.output/
 test/fixtures/*/.next/
