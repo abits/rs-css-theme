@@ -2,7 +2,7 @@
 
 ## Why
 
-We want to style websites with the look of typesafe.ai without rebuilding it
+We want to style websites with the retrosafe look without rebuilding it
 per framework. Our sites use Vue, React, AlpineJS, Nuxt and Next, and all of
 them can run Tailwind v4, so Tailwind's CSS-first theme variables are a
 common ground. The earlier framing as a Nuxt Layer for Nuxt UI no longer
@@ -10,13 +10,13 @@ fits the goal.
 
 ## What Changes
 
-- Add a framework-neutral, plain-CSS package that applies the typesafe.ai
+- Add a framework-neutral, plain-CSS package that applies the retrosafe
   look to Tailwind v4 sites.
 - Define a small token contract in Tailwind's theme namespaces. A look is a
   CSS file that implements the contract completely, and the host swaps looks
   by changing one import line.
-- Ship the typesafe look as the first look, with a light and a dark mode.
-  The reference site has no dark mode, so the dark values are designed.
+- Ship the retrosafe look as the first look, with a light and a dark mode.
+  The look has no native dark mode, so the dark values are designed.
 - Select the mode through `color-scheme` and `light-dark()`, so the package
   ships no mode selectors and the host stays in control. Evergreen browsers
   only.
@@ -30,7 +30,7 @@ fits the goal.
 - `theme-contract`: The set of tokens every look must define, the rule that
   a look is swappable through one import, and the mode selection through
   `color-scheme`.
-- `typesafe-look`: The typesafe.ai look as a look file, with designed light
+- `retrosafe-look`: The retrosafe look as a look file, with designed light
   and dark values, an accessible accent, and free default fonts.
 
 ### Modified Capabilities

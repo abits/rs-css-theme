@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { checkContrast, contrastRatio, parseLightDark } from '../../src/look-checks.mjs';
 
 const contract = JSON.parse(readFileSync(new URL('../../contract.json', import.meta.url), 'utf8'));
-const typesafeLook = readFileSync(new URL('../../looks/typesafe.css', import.meta.url), 'utf8');
+const retrosafeLook = readFileSync(new URL('../../looks/retrosafe.css', import.meta.url), 'utf8');
 
 test('computes 21:1 for black on white', () => {
   const ratio = contrastRatio('#000000', '#ffffff');
@@ -24,8 +24,8 @@ test('splits a light-dark value into its two colors', () => {
   assert.deepEqual(pair, ['#fefefe', '#1e1e1e']);
 });
 
-test('passes every text pairing of the typesafe look in both modes', () => {
-  const css = typesafeLook;
+test('passes every text pairing of the retrosafe look in both modes', () => {
+  const css = retrosafeLook;
 
   const problems = checkContrast(css, contract.textPairings);
 
@@ -33,7 +33,7 @@ test('passes every text pairing of the typesafe look in both modes', () => {
 });
 
 test('fails a look whose muted color is too light on the light background', () => {
-  const css = typesafeLook.replace('light-dark(#6b6b6b, #a3a3a3)', 'light-dark(#aaaaaa, #a3a3a3)');
+  const css = retrosafeLook.replace('light-dark(#6b6b6b, #a3a3a3)', 'light-dark(#aaaaaa, #a3a3a3)');
 
   const problems = checkContrast(css, contract.textPairings);
 

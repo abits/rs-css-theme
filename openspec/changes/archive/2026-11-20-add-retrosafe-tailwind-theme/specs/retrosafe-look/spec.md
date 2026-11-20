@@ -2,15 +2,14 @@
 
 ## Purpose
 
-Provides the typesafe.ai look as the first look of the package: its palette,
-square corners and typography, with a designed dark mode, for sites that
-should resemble the reference site.
+Provides the retrosafe look as the first look of the package: its palette,
+square corners and typography, with a designed dark mode, for retro-styled sites.
 
 ## ADDED Requirements
 
-### Requirement: Light palette matches the reference
+### Requirement: Light palette
 
-In light mode the typesafe look SHALL use the reference palette: background `#fefefe`, foreground `#1e1e1e`, accent `#f386a1` and accent-foreground `#1e1e1e`.
+In light mode the retrosafe look SHALL use this palette: background `#fefefe`, foreground `#1e1e1e`, accent `#f386a1` and accent-foreground `#1e1e1e`.
 
 #### Scenario: Light mode colors
 
@@ -19,7 +18,7 @@ In light mode the typesafe look SHALL use the reference palette: background `#fe
 
 ### Requirement: Dark mode is designed
 
-In dark mode the typesafe look SHALL use `#1e1e1e` as background and `#fefefe` as foreground and SHALL keep the accent hue. The reference has no dark mode, so these values are a design decision of this look and are not extracted from the site.
+In dark mode the retrosafe look SHALL use `#1e1e1e` as background and `#fefefe` as foreground and SHALL keep the accent hue. The look has no native dark mode, so these values are a design decision of this look.
 
 #### Scenario: Dark mode colors
 
@@ -28,7 +27,7 @@ In dark mode the typesafe look SHALL use `#1e1e1e` as background and `#fefefe` a
 
 ### Requirement: Text contrast
 
-Every text color pairing of the typesafe look SHALL reach a contrast ratio of at least 4.5:1 in each mode. The pairings are foreground and muted on background, and accent-foreground on accent.
+Every text color pairing of the retrosafe look SHALL reach a contrast ratio of at least 4.5:1 in each mode. The pairings are foreground and muted on background, and accent-foreground on accent.
 
 #### Scenario: Contrast check
 
@@ -37,7 +36,7 @@ Every text color pairing of the typesafe look SHALL reach a contrast ratio of at
 
 ### Requirement: Square corners
 
-The typesafe look SHALL use no radius larger than 4px. The `sm` radius SHALL be 0.
+The retrosafe look SHALL use no radius larger than 4px. The `sm` radius SHALL be 0.
 
 #### Scenario: Radius values
 
@@ -46,7 +45,7 @@ The typesafe look SHALL use no radius larger than 4px. The `sm` radius SHALL be 
 
 ### Requirement: Free default fonts
 
-The typesafe look SHALL set `sans` to Inter and `mono` to JetBrains Mono. It SHALL NOT ship or reference the commercially licensed font of the reference site.
+The retrosafe look SHALL set `sans` to Inter and `mono` to JetBrains Mono. It SHALL NOT ship or reference a commercially licensed font.
 
 #### Scenario: Font families
 

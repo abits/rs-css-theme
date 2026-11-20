@@ -1,4 +1,4 @@
-// Loads a built fixture page in Chromium and checks that the typesafe look
+// Loads a built fixture page in Chromium and checks that the retrosafe look
 // resolves for forced light, forced dark and system (light dark) mode.
 // Usage: node check-modes.cjs <file-or-http-url>
 const { chromium } = require('playwright');

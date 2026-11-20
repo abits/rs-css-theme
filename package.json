@@ -1,7 +1,7 @@
 {
   "name": "ts-css-theme",
   "version": "0.1.0",
-  "description": "Swappable looks for Tailwind v4 sites, starting with the typesafe.ai look.",
+  "description": "Swappable looks for Tailwind v4 sites, starting with the retrosafe look.",
   "type": "module",
   "license": "UNLICENSED",
   "files": ["looks"],

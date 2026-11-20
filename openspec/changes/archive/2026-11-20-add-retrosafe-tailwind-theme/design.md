@@ -6,8 +6,7 @@ The package is a set of plain CSS files that hosts import into their Tailwind
 v4 entry stylesheet. See `proposal.md` for the motivation and `specs/` for the
 required behavior. Tailwind v4 turns CSS variables in its theme namespaces
 (`--color-*`, `--radius-*`, `--font-*`) into utilities such as `bg-background`
-(Tailwind docs, `theme.mdx`). The reference site is a Framer site without
-Tailwind and without a dark mode.
+(Tailwind docs, `theme.mdx`).
 
 ## Goals / Non-Goals
 
@@ -18,7 +17,7 @@ Tailwind and without a dark mode.
 
 **Non-Goals:**
 
-- Component styles of the reference (window panels, gradient hero, motion).
+- Component styles of the look (window panels, gradient hero, motion).
 - Support for Tailwind v3, legacy browsers, Nuxt UI or Tailwind Plus snippets.
 
 ## Decisions
@@ -38,7 +37,7 @@ Tailwind `dark:` variant (it styles individual utilities, not a theme).
 Only colors vary by mode; radius, fonts and tracking do not.
 
 **3. One file per look under `looks/`.**
-The host imports `ts-css-theme/looks/typesafe.css`. Tokens common to all looks
+The host imports `ts-css-theme/looks/retrosafe.css`. Tokens common to all looks
 are listed once in the contract list that the contract check reads.
 
 **4. A contract check enforces completeness.**
@@ -57,7 +56,7 @@ unverified. This can be added later without changing the contract.
 `#1e1e1e` becomes the background and `#fefefe` the text. The accent
 `#f386a1` has about 6.9:1 contrast against `#1e1e1e` text, so
 `accent-foreground` stays `#1e1e1e` in both modes. The muted text color must
-be darker than the reference's `#858585`, which reaches only about 3.7:1 on
+be darker than the original `#858585`, which reaches only about 3.7:1 on
 `#fefefe`. The computed ratios are 6.93:1 and 3.66:1, and the contrast test
 guards the look's own pairings.
 

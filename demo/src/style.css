@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "ts-css-theme/looks/typesafe.css";
+@import "ts-css-theme/looks/retrosafe.css";
 
 :root { color-scheme: light dark; }
 :root[data-mode="light"] { color-scheme: light; }

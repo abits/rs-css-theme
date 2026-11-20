@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { checkContract, parseTheme } from '../../src/look-checks.mjs';
 
 const contract = JSON.parse(readFileSync(new URL('../../contract.json', import.meta.url), 'utf8'));
-const typesafeLook = readFileSync(new URL('../../looks/typesafe.css', import.meta.url), 'utf8');
+const retrosafeLook = readFileSync(new URL('../../looks/retrosafe.css', import.meta.url), 'utf8');
 
 const completeLook = `@theme {
   --color-background: light-dark(#fff, #000);
@@ -50,8 +50,8 @@ test('ignores tokens that appear only inside comments', () => {
   assert.deepEqual([...tokens.keys()], ['--radius-sm']);
 });
 
-test('accepts the typesafe look file', () => {
-  const css = typesafeLook;
+test('accepts the retrosafe look file', () => {
+  const css = retrosafeLook;
 
   const problems = checkContract(css, contract);
 

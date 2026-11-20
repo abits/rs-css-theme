@@ -1,10 +1,10 @@
 # ts-css-theme
 
-Swappable looks for Tailwind v4 sites. The first look reproduces typesafe.ai, with a light and a dark mode. The package is plain CSS: no JavaScript, no plugin and no framework dependency beyond Tailwind v4. It works with Vue, React, AlpineJS, Nuxt and Next.
+Swappable looks for Tailwind v4 sites. The first look, retrosafe, has a light and a dark mode. The package is plain CSS: no JavaScript, no plugin and no framework dependency beyond Tailwind v4. It works with Vue, React, AlpineJS, Nuxt and Next.
 
 ## What's new — v0.1.0
 
-- The `typesafe` look reproduces typesafe.ai in light and dark mode, with square corners and Inter and JetBrains Mono as the default fonts.
+- The `retrosafe` look has a light and a dark mode, with square corners and Inter and JetBrains Mono as the default fonts.
 - Hosts swap looks with one CSS import, and the mode follows the host's `color-scheme` through `light-dark()`.
 - Every look must define each token of `contract.json`, and `npm test` checks the contract, text contrast, radii and fonts.
 - Vue, React, AlpineJS, Nuxt and Next are verified in Chromium; hosts must raise their CSS build target, as the README explains.
@@ -28,7 +28,7 @@ npm 12 and later block git dependencies unless you pass `--allow-git`. To work o
 Import the look in your Tailwind v4 entry stylesheet:
 
     @import "tailwindcss";
-    @import "ts-css-theme/looks/typesafe.css";
+    @import "ts-css-theme/looks/retrosafe.css";
 
 Then use the contract utilities: `bg-background`, `text-foreground`, `text-muted`, `border-border`, `bg-accent`, `text-accent-foreground`, `rounded-sm`, `rounded-md`, `rounded-lg`, `font-sans` and `font-mono`. To switch to another look, replace the import line with the import of that look.
 
@@ -61,7 +61,7 @@ Next, in `package.json`:
 
 ### Fonts
 
-The typesafe look sets `Inter` for `font-sans` and `JetBrains Mono` for `font-mono`, each with a generic fallback. The package ships no font files. Load both families in the way your host prefers, for example with a `<link>` to a font provider or a self-hosted `@font-face`, and use these exact family names. The demo in `demo/` self-hosts both through the `@fontsource/inter` and `@fontsource/jetbrains-mono` packages.
+The retrosafe look sets `Inter` for `font-sans` and `JetBrains Mono` for `font-mono`, each with a generic fallback. The package ships no font files. Load both families in the way your host prefers, for example with a `<link>` to a font provider or a self-hosted `@font-face`, and use these exact family names. The demo in `demo/` self-hosts both through the `@fontsource/inter` and `@fontsource/jetbrains-mono` packages.
 
 ### Browser support
 

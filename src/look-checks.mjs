@@ -1,4 +1,4 @@
-// Checks that a look file satisfies the contract and the typesafe look spec.
+// Checks that a look file satisfies the contract and the retrosafe look spec.
 // shortcut: a regex reads flat @theme blocks only, switch to postcss if looks gain nesting.
 export function parseTheme(css) {
   const tokens = new Map();

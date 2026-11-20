@@ -3,10 +3,10 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { checkFonts, checkRadius } from '../../src/look-checks.mjs';
 
-const typesafeLook = readFileSync(new URL('../../looks/typesafe.css', import.meta.url), 'utf8');
+const retrosafeLook = readFileSync(new URL('../../looks/retrosafe.css', import.meta.url), 'utf8');
 
-test('accepts the radii of the typesafe look', () => {
-  const css = typesafeLook;
+test('accepts the radii of the retrosafe look', () => {
+  const css = retrosafeLook;
 
   const problems = checkRadius(css);
 
@@ -14,7 +14,7 @@ test('accepts the radii of the typesafe look', () => {
 });
 
 test('rejects a radius above 4px', () => {
-  const css = typesafeLook.replace('--radius-lg: 4px;', '--radius-lg: 0.5rem;');
+  const css = retrosafeLook.replace('--radius-lg: 4px;', '--radius-lg: 0.5rem;');
 
   const problems = checkRadius(css);
 
@@ -22,7 +22,7 @@ test('rejects a radius above 4px', () => {
 });
 
 test('rejects a small radius that is not 0', () => {
-  const css = typesafeLook.replace('--radius-sm: 0;', '--radius-sm: 1px;');
+  const css = retrosafeLook.replace('--radius-sm: 0;', '--radius-sm: 1px;');
 
   const problems = checkRadius(css);
 
@@ -30,7 +30,7 @@ test('rejects a small radius that is not 0', () => {
 });
 
 test('accepts Inter and JetBrains Mono with generic fallbacks', () => {
-  const css = typesafeLook;
+  const css = retrosafeLook;
 
   const problems = checkFonts(css);
 
@@ -38,7 +38,7 @@ test('accepts Inter and JetBrains Mono with generic fallbacks', () => {
 });
 
 test('rejects a sans family that lacks a generic fallback', () => {
-  const css = typesafeLook.replace('system-ui, sans-serif;', 'system-ui;');
+  const css = retrosafeLook.replace('system-ui, sans-serif;', 'system-ui;');
 
   const problems = checkFonts(css);
 
@@ -46,7 +46,7 @@ test('rejects a sans family that lacks a generic fallback', () => {
 });
 
 test('rejects a mono family that is not JetBrains Mono', () => {
-  const css = typesafeLook.replace('"JetBrains Mono"', '"Fira Code"');
+  const css = retrosafeLook.replace('"JetBrains Mono"', '"Fira Code"');
 
   const problems = checkFonts(css);
 
