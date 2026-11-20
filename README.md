@@ -4,7 +4,7 @@ Swappable looks for Tailwind v4 sites. The first look, retrosafe, has a light an
 
 ## What's new — v0.3.0
 
-- The package is renamed `rs-css-theme`: install it from `github:abits/rs-css-theme` and change imports from `ts-css-theme/looks/retrosafe.css` to `rs-css-theme/looks/retrosafe.css`.
+- The package is renamed to `rs-css-theme`: install it from `github:abits/rs-css-theme` and import looks from `rs-css-theme/looks/retrosafe.css`.
 - The repository moved to `abits/rs-css-theme`, and GitHub redirects the old address.
 
 Earlier releases: see [CHANGELOG.md](CHANGELOG.md).
