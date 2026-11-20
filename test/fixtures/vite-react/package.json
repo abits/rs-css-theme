@@ -1,0 +1,4 @@
+{ "name": "fixture-vite-react", "private": true, "type": "module",
+  "scripts": { "build": "vite build" },
+  "dependencies": { "ts-css-theme": "file:../../..", "react": "^19.0.0", "react-dom": "^19.0.0" },
+  "devDependencies": { "@tailwindcss/vite": "4.3.5", "@vitejs/plugin-react": "latest", "tailwindcss": "4.3.5", "vite": "8.3.8" } }

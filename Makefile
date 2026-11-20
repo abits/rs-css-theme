@@ -2,7 +2,7 @@
 
 # Skips the files `openspec init` generates; `openspec update` overwrites them.
 lint-md:
-	markdownlint-cli2 "**/*.md" "#.claude/skills/openspec-*/**" "#.claude/commands/opsx/**"
+	markdownlint-cli2 "**/*.md" "#.claude/skills/openspec-*/**" "#.claude/commands/opsx/**" "#**/node_modules"
 
 repo-init:
 	bash scripts/repo-init.sh
