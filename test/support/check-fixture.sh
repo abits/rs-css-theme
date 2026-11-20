@@ -10,8 +10,8 @@ for label in default raised; do
   [ "${ONLY_RAISED:-}" = 1 ] && [ "$label" = default ] && continue
   value=""; [ "$label" = raised ] && value="$raised"
   rm -rf "$out"
-  env "$envname=$value" NEXT_TELEMETRY_DISABLED=1 NUXT_TELEMETRY_DISABLED=1 bash -c "$build" >"/tmp/claude-0/build-$label.log" 2>&1 \
-    || { echo "BUILD FAIL ($label), see /tmp/claude-0/build-$label.log"; status=1; continue; }
+  env "$envname=$value" NEXT_TELEMETRY_DISABLED=1 NUXT_TELEMETRY_DISABLED=1 bash -c "$build" >"${LOG_DIR:-/tmp}/build-$label.log" 2>&1 \
+    || { echo "BUILD FAIL ($label), see ${LOG_DIR:-/tmp}/build-$label.log"; status=1; continue; }
   python3 -m http.server 4173 --directory "$out" >/dev/null 2>&1 & server=$!
   sleep 1
   css="$(find "$out" -name '*.css' -print0 | xargs -0 cat | grep -oE '\-\-color-background:[^;}]{0,60}' | head -1)"
