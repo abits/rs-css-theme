@@ -1,8 +1,2 @@
 @import "tailwindcss";
-
-@theme {
-  --color-background: light-dark(#fefefe, #1e1e1e);
-  --color-foreground: light-dark(#1e1e1e, #fefefe);
-  --radius-md: 0;
-  --font-sans: "Inter", sans-serif;
-}
+@import "ts-css-theme/looks/typesafe.css";
