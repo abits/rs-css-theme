@@ -50,6 +50,14 @@ theme toggle. Its dark values therefore do not exist and must be designed.
   keep the pink accent. The accent must reach a contrast ratio of at least
   4.5:1 for text on the dark background (WCAG 2.x AA), or a lighter variant
   is used for text.
+- The mode is selected through CSS `color-scheme`. Looks define colors with
+  `light-dark()`, so the package ships no mode selectors and the host
+  decides by setting `color-scheme` (system preference, class or attribute).
+  Only colors depend on the mode; radius, fonts and tracking are the same in
+  both.
+- Evergreen browsers only; legacy browsers are not supported. The baseline is
+  the first versions with `light-dark()` support, roughly Chrome 123,
+  Firefox 120 and Safari 17.5 (to be confirmed before it is fixed in a spec).
 - The fonts of the reference look may be commercially licensed. The default
   uses free fonts (Inter, JetBrains Mono); the original font is left to the
   host.
@@ -68,8 +76,17 @@ theme toggle. Its dark values therefore do not exist and must be designed.
   it get its own palette (for example a slightly warm dark grey)?
 - Do subpages of the reference (docs, console) differ from the first
   viewport? Only the landing page was rendered.
-- How do the five hosts select the mode (media query, class or attribute)?
-  The package must work with the Tailwind v4 `dark` variant in each setup.
+- Does `light-dark()` work directly inside `@theme` (for example
+  `--color-background: light-dark(#fefefe, #1e1e1e)`) without the two-layer
+  pattern of raw variables plus `@theme inline`? Verify in a prototype; the
+  Tailwind docs only show the two-layer pattern.
+- Does the look file set `:root { color-scheme: light dark }` as a default,
+  or does the host always opt in? Without it, a site stays light until the
+  host acts.
+- Should the token contract live directly in Tailwind's namespaces
+  (`--color-*`, `--radius-*`, `--font-*`), or in a separate `--ts-*`
+  namespace mapped onto them? The direct form is preferred if the
+  `light-dark()` check above holds.
 - Who ships the font files: the package (`@font-face` for free fonts) or the
   host?
 - Verify that `@import` of a package CSS file resolves in all five host
