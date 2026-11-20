@@ -20,10 +20,13 @@ The reference look, as read from its inline CSS (not yet confirmed visually):
   Tailwind v4 sites.
 - Supported hosts: Vue, React, AlpineJS, Nuxt and Next.
 - The look is swappable in code: changing one import line replaces it with
-  another look. There is no user-facing toggle.
+  another look. There is no user-facing look toggle.
+- Every look supports a light and a dark mode. The package only defines the
+  values for both; how the host selects the mode (system preference, class or
+  attribute) stays the host's concern.
 - A small, stable token contract (semantic names such as background,
   foreground, accent, radius, font families). A look is a file that
-  implements the contract completely.
+  implements the contract completely, for both modes.
 
 ## Constraints
 
@@ -39,17 +42,18 @@ The reference look, as read from its inline CSS (not yet confirmed visually):
 
 ## Out of scope
 
-- Runtime theme switching by the end user (toggle, persistence).
+- Switching the look at runtime by the end user (toggle, persistence). The
+  light/dark mode switch belongs to the host, not to this package.
 - Animations and layout of the reference site.
-- Component libraries with their own variable systems (Nuxt UI) and
-  Tailwind Plus snippets, unless a later change adds an adapter.
+- Nuxt UI and other component libraries with their own variable systems.
+- Tailwind Plus snippets (hardcoded palettes, separate license).
 
 ## Open questions
 
-- Does the reference site have a real dark mode? Confirm with a rendered
-  screenshot.
-- Is Nuxt UI still in scope? If yes, add a thin adapter that maps the tokens
-  to `--ui-*`.
+- Does the reference site have a real dark mode? If not, the dark values
+  must be designed, not extracted. Confirm with rendered screenshots.
+- How do the five hosts select the mode (media query, class or attribute)?
+  The package must work with the Tailwind v4 `dark` variant in each setup.
 - Who ships the font files: the package (`@font-face` for free fonts) or the
   host?
 - Verify that `@import` of a package CSS file resolves in all five host
