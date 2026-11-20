@@ -19,39 +19,57 @@
       </div>
     </div>
 
-    <!-- Header: wordmark, square nav chips, black button -->
-    <header class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4">
-      <a href="#top" class="font-semibold tracking-tight">Lorem Ipsum</a>
-      <nav class="flex flex-wrap gap-2 font-mono text-sm" aria-label="Main">
-        <a href="#top" class="border border-border bg-background px-3 py-1">Lorem</a>
-        <a href="#top" class="border border-border bg-background px-3 py-1">Ipsum</a>
-        <a href="#top" class="border border-border bg-background px-3 py-1">Dolor</a>
-        <a href="#top" class="border border-border bg-background px-3 py-1">Sit amet</a>
-      </nav>
-      <a href="#top" class="bg-foreground px-4 py-1.5 font-mono text-sm text-background">Consectetur</a>
-    </header>
+    <!-- Hero: gradient stands in for the live cloud image; header chips sit flush at the top edge -->
+    <section class="hero-gradient">
+      <header class="flex flex-wrap items-stretch justify-between gap-y-1 text-lg font-medium">
+        <a href="#top" class="bg-background px-2 py-1.5">Lorem Ipsum</a>
+        <nav class="flex flex-wrap gap-1" aria-label="Main">
+          <a href="#top" class="bg-background px-2 py-1.5">Lorem</a>
+          <a href="#top" class="bg-background px-2 py-1.5">Ipsum</a>
+          <a href="#top" class="bg-background px-2 py-1.5">Dolor</a>
+          <a href="#top" class="bg-background px-2 py-1.5">Sit amet</a>
+        </nav>
+        <div class="flex gap-1">
+          <a href="#top" class="bg-background px-2 py-1.5">Consectetur</a>
+          <a href="#top" class="bg-foreground px-2 py-1.5 text-background">Adipiscing</a>
+        </div>
+      </header>
 
-    <main id="top">
-      <!-- Hero: pastel gradient with a desktop of titled windows -->
-      <section class="hero-gradient border-y border-border">
-        <div class="mx-auto max-w-6xl px-4 py-16">
-          <div class="relative mb-12 max-w-3xl">
-            <span class="absolute -top-6 left-0 font-mono text-2xl text-muted" aria-hidden="true">#</span>
-            <p class="mb-3 font-mono text-sm">LOR.EM.0S1</p>
-            <h1 class="text-5xl font-semibold leading-tight tracking-tight">Lorem ipsum dolor sit amet consectetur</h1>
-            <span class="absolute -bottom-8 right-0 font-mono text-2xl text-muted" aria-hidden="true">#</span>
+      <div id="top" class="mx-auto max-w-6xl px-4 pb-24 pt-16 text-center">
+        <!-- Notification window with a double border -->
+        <div class="mx-auto mb-16 max-w-sm border border-foreground bg-window p-0.5 text-foreground">
+          <div class="border border-foreground">
+            <div class="bg-foreground px-2 py-0.5 text-left font-mono text-sm text-background">Oct 0, 0000 · Lorem Ipsum</div>
+            <div class="space-y-3 p-3 font-mono text-sm">
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+              <a href="#top" class="underline">Lorem ipsum</a>
+            </div>
           </div>
+        </div>
 
-          <div class="grid gap-4 md:grid-cols-3">
-            <div class="border border-foreground bg-border">
+        <p class="mb-6">Lorem ipsum <span class="text-muted">........................</span> Dolor sit amet</p>
+        <h1 class="mx-auto max-w-5xl text-[clamp(3rem,10.9vw,8.75rem)] font-medium leading-[0.85] tracking-tighter">Lorem Ipsum (Dolor) Sit Amet Consectetur Elit</h1>
+        <div class="mt-10 flex justify-center gap-10 text-2xl font-medium">
+          <a href="#top" class="underline underline-offset-4">Lorem ipsum</a>
+          <a href="#top" class="underline underline-offset-4">Dolor sit</a>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <!-- Pink band: desktop of titled windows -->
+      <section class="bg-accent px-4 py-16 text-accent-foreground">
+        <div class="mx-auto max-w-6xl space-y-10">
+          <h2 class="text-center text-4xl font-medium leading-none tracking-tight md:text-[4rem]">Lorem Ipsum Dolor<br />Sit Amet Elit</h2>
+          <div class="grid gap-4 text-foreground md:grid-cols-3">
+            <div class="border border-foreground bg-window">
               <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">Lorem Tool 1.1</div>
               <div class="space-y-1 p-4 font-mono text-sm">
                 <p>00 / 00 / 0000</p>
                 <p class="text-3xl">00:00</p>
               </div>
             </div>
-
-            <div class="border border-foreground bg-border">
+            <div class="border border-foreground bg-window">
               <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">Ipsum 1.1</div>
               <div class="grid grid-cols-8 gap-px p-4" aria-hidden="true">
                 <span class="aspect-square bg-foreground"></span><span class="aspect-square"></span><span class="aspect-square"></span><span class="aspect-square bg-foreground"></span><span class="aspect-square"></span><span class="aspect-square"></span><span class="aspect-square"></span><span class="aspect-square"></span>
@@ -59,8 +77,7 @@
                 <span class="aspect-square bg-foreground"></span><span class="aspect-square bg-foreground"></span><span class="aspect-square"></span><span class="aspect-square"></span><span class="aspect-square"></span><span class="aspect-square"></span><span class="aspect-square bg-foreground"></span><span class="aspect-square"></span>
               </div>
             </div>
-
-            <div class="border border-foreground bg-border">
+            <div class="border border-foreground bg-window">
               <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">LOREM</div>
               <div class="space-y-2 p-4 font-mono text-sm">
                 <p class="text-muted">&lt;lorem ipsum&gt;</p>
@@ -68,16 +85,14 @@
                 <p>Sit amet</p>
               </div>
             </div>
-
-            <div class="border border-foreground bg-border">
+            <div class="border border-foreground bg-window">
               <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">IPSUM</div>
               <div class="space-y-2 p-4 font-mono text-sm">
                 <p class="font-semibold">Lorem ipsum</p>
                 <p class="text-muted">&lt;dolor sit&gt;</p>
               </div>
             </div>
-
-            <div class="border border-foreground bg-border">
+            <div class="border border-foreground bg-window">
               <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">DOLOR</div>
               <div class="space-y-3 p-4 font-mono text-sm">
                 <p class="font-semibold">Consectetur adipiscing</p>
@@ -90,8 +105,7 @@
                 </div>
               </div>
             </div>
-
-            <div class="border border-foreground bg-border">
+            <div class="border border-foreground bg-window">
               <div class="flex items-center gap-2 bg-foreground px-2 py-1 font-mono text-xs text-background">
                 <span class="inline-block size-3 bg-accent" aria-hidden="true"></span>SITAMET
               </div>
@@ -108,7 +122,7 @@
       <div class="mx-auto max-w-6xl space-y-24 px-4 py-24">
         <!-- Text bento: three grid cards -->
         <section class="space-y-8">
-          <h2 class="max-w-2xl text-4xl font-semibold tracking-tight">Lorem ipsum dolor sit amet</h2>
+          <h2 class="max-w-3xl text-4xl font-medium leading-none tracking-tight md:text-[4rem]">Lorem ipsum dolor sit amet</h2>
           <div class="grid gap-4 md:grid-cols-3">
             <article class="space-y-3 border border-border p-6">
               <p class="font-mono text-sm text-muted">01</p>
@@ -128,8 +142,32 @@
           </div>
         </section>
 
+        <!-- Stat and comparison -->
+        <section class="grid items-center gap-8 md:grid-cols-2">
+          <div class="space-y-4">
+            <h2 class="text-4xl font-medium leading-none tracking-tight md:text-[4rem]">000x Lorem, 000x Ipsum.</h2>
+            <p class="font-mono text-xs text-muted">*lorem ipsum dolor sit amet</p>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="border border-foreground bg-window">
+            <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">lorem.ipsum</div>
+            <div class="space-y-4 p-6 font-mono text-sm">
+              <div class="space-y-1">
+                <p>Lorem Ipsum</p>
+                <div class="h-4 w-[6%] bg-accent"></div>
+                <p class="text-muted">$0.000000 · 0.000s</p>
+              </div>
+              <div class="space-y-1">
+                <p>Dolor</p>
+                <div class="h-4 w-full bg-foreground"></div>
+                <p class="text-muted">$0.000000 · 0.000s</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- Code window -->
-        <section class="border border-foreground bg-border">
+        <section class="border border-foreground bg-window">
           <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">lorem.ipsum</div>
           <pre class="overflow-x-auto p-4 font-mono text-sm">lorem ipsum dolor sit amet
   consectetur adipiscing elit
@@ -137,71 +175,51 @@
     incididunt ut labore et dolore
   magna aliqua ut enim ad minim</pre>
         </section>
+      </div>
 
-        <!-- Stat and comparison -->
-        <section class="grid items-center gap-8 md:grid-cols-2">
-          <div class="space-y-4">
-            <h2 class="text-4xl font-semibold tracking-tight">000x Lorem, 000x Ipsum.</h2>
-            <p class="font-mono text-xs text-muted">*lorem ipsum dolor sit amet</p>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#top" class="inline-block border border-foreground px-4 py-2 font-mono text-sm">Lorem ipsum</a>
-          </div>
-          <div class="space-y-4 border border-border p-6 font-mono text-sm">
-            <div class="space-y-1">
-              <p>Lorem Ipsum</p>
-              <div class="h-4 w-[6%] bg-accent"></div>
-              <p class="text-muted">$0.000000 · 0.000s</p>
-            </div>
-            <div class="space-y-1">
-              <p>Dolor</p>
-              <div class="h-4 w-full bg-foreground"></div>
-              <p class="text-muted">$0.000000 · 0.000s</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Chart and explainer -->
-        <section class="space-y-8">
-          <h2 class="max-w-3xl text-4xl font-semibold tracking-tight">Lorem ipsum dolor sit amet consectetur adipiscing.</h2>
-          <div class="grid gap-4 md:grid-cols-3">
-            <div class="border border-foreground bg-border md:col-span-2">
+      <!-- Pink band: chart, explainer and stat cards -->
+      <section class="bg-accent px-4 py-16 text-accent-foreground">
+        <div class="mx-auto max-w-6xl space-y-10">
+          <h2 class="max-w-4xl text-4xl font-medium leading-none tracking-tight md:text-[4rem]">Lorem ipsum dolor sit amet consectetur adipiscing.</h2>
+          <div class="grid gap-4 text-foreground md:grid-cols-3">
+            <div class="border border-foreground bg-window md:col-span-2">
               <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">Lorem vs. Ipsum</div>
               <div class="flex h-56 items-end gap-3 p-4" aria-hidden="true">
                 <span class="h-[20%] flex-1 bg-foreground"></span><span class="h-[35%] flex-1 bg-foreground"></span><span class="h-[30%] flex-1 bg-foreground"></span><span class="h-[55%] flex-1 bg-foreground"></span><span class="h-[95%] flex-1 bg-accent"></span>
               </div>
             </div>
-            <div class="space-y-6">
-              <div class="space-y-2 border border-border p-6">
+            <div class="space-y-4">
+              <div class="space-y-2 border border-foreground bg-window p-6">
                 <h3 class="font-semibold">Lorem ipsum</h3>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</p>
               </div>
-              <div class="space-y-2 border border-border p-6">
+              <div class="space-y-2 border border-foreground bg-window p-6">
                 <p class="font-mono text-xs text-muted">Dolor</p>
                 <h3 class="font-semibold">Sit amet elit</h3>
-                <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
               </div>
             </div>
           </div>
-        </section>
-
-        <!-- Stat cards -->
-        <section class="grid gap-4 md:grid-cols-2">
-          <div class="space-y-2 border border-foreground bg-border p-6">
-            <p class="font-mono text-xs">Lorem.Ipsum</p>
-            <p class="text-6xl font-semibold">$00</p>
-            <p class="font-mono text-sm">Lorem ipsum dolor sit.</p>
+          <div class="grid gap-4 text-foreground md:grid-cols-2">
+            <div class="space-y-2 border border-foreground bg-window p-6">
+              <p class="font-mono text-xs">Lorem.Ipsum</p>
+              <p class="text-6xl font-semibold">$00</p>
+              <p class="font-mono text-sm">Lorem ipsum dolor sit.</p>
+            </div>
+            <div class="space-y-2 border border-foreground bg-window p-6">
+              <p class="font-mono text-xs">Lorem.Ipsum</p>
+              <p class="text-6xl font-semibold">000x</p>
+              <p class="font-mono text-sm">Consectetur adipiscing elit.</p>
+            </div>
           </div>
-          <div class="space-y-2 border border-foreground bg-border p-6">
-            <p class="font-mono text-xs">Lorem.Ipsum</p>
-            <p class="text-6xl font-semibold">000x</p>
-            <p class="font-mono text-sm">Consectetur adipiscing elit.</p>
-          </div>
-        </section>
+        </div>
+      </section>
 
+      <div class="mx-auto max-w-6xl space-y-24 px-4 py-24">
         <!-- Call to action -->
-        <section class="hero-gradient space-y-6 border border-border p-12 text-center">
-          <h2 class="text-4xl font-semibold tracking-tight">Lorem ipsum dolor</h2>
-          <a href="#top" class="inline-block bg-foreground px-6 py-2 font-mono text-sm text-background">Sit amet</a>
+        <section class="flex flex-wrap items-center justify-between gap-6">
+          <h2 class="text-4xl font-medium leading-none tracking-tight md:text-[4rem]">Lorem ipsum dolor</h2>
+          <a href="#top" class="text-2xl font-medium underline underline-offset-4">Sit amet</a>
         </section>
 
         <!-- Blog cards -->
@@ -228,7 +246,7 @@
 
         <!-- FAQ accordion: first item open -->
         <section class="space-y-6">
-          <h2 class="text-4xl font-semibold tracking-tight">Lorem ipsum dolor</h2>
+          <h2 class="text-center text-4xl font-medium leading-none tracking-tight md:text-[4rem]">Lorem ipsum dolor</h2>
           <div class="divide-y divide-border border border-border">
             <details name="faq" open class="group p-4">
               <summary class="flex cursor-pointer items-center justify-between font-semibold">Lorem ipsum dolor sit amet? <span class="font-mono group-open:hidden" aria-hidden="true">+</span><span class="hidden font-mono group-open:inline" aria-hidden="true">-</span></summary>
@@ -244,21 +262,18 @@
       </div>
     </main>
 
-    <!-- Footer: copyright window and link list -->
-    <footer class="border-t border-border">
-      <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-2">
-        <div class="border border-foreground bg-border">
-          <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">Lorem Ipsum</div>
-          <p class="p-4 font-mono text-sm">Version 0.00 · Lorem ipsum dolor sit amet. Consectetur adipiscing elit.</p>
-        </div>
-        <div class="space-y-3 font-mono text-sm">
-          <p class="text-muted">Lorem</p>
-          <ul class="space-y-1">
-            <li><a href="#top">Ipsum dolor</a></li>
-            <li><a href="#top">Sit amet</a></li>
-            <li><a href="#top">Consectetur</a></li>
-            <li><a href="#top">Adipiscing</a></li>
-          </ul>
+    <!-- Footer: inverted band with a huge wordmark -->
+    <footer class="bg-foreground px-4 py-12 text-background">
+      <div class="mx-auto max-w-6xl space-y-10">
+        <p class="text-center text-6xl font-medium tracking-tight md:text-8xl">Lorem Ipsum</p>
+        <div class="flex flex-wrap justify-between gap-4 font-mono text-sm">
+          <span>Lorem Ipsum © 0000</span>
+          <nav class="flex flex-wrap gap-6" aria-label="Footer">
+            <a href="#top">Ipsum dolor</a>
+            <a href="#top">Sit amet</a>
+            <a href="#top">Consectetur</a>
+            <a href="#top">Adipiscing</a>
+          </nav>
         </div>
       </div>
     </footer>
