@@ -1,0 +1,15 @@
+@theme {
+  --color-background: light-dark(#fefefe, #1e1e1e);
+  --color-foreground: light-dark(#1e1e1e, #fefefe);
+  --color-muted: light-dark(#6b6b6b, #a3a3a3);
+  --color-border: light-dark(#dedede, #3d3d3d);
+  --color-accent: light-dark(#f386a1, #f386a1);
+  --color-accent-foreground: light-dark(#1e1e1e, #1e1e1e);
+
+  --radius-sm: 0;
+  --radius-md: 2px;
+  --radius-lg: 4px;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
