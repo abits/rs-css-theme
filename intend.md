@@ -1,4 +1,4 @@
-# Intend: ts-css-theme
+# Intend: rs-css-theme
 
 ## Problem
 

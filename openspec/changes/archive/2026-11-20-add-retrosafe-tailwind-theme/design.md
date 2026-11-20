@@ -37,7 +37,7 @@ Tailwind `dark:` variant (it styles individual utilities, not a theme).
 Only colors vary by mode; radius, fonts and tracking do not.
 
 **3. One file per look under `looks/`.**
-The host imports `ts-css-theme/looks/retrosafe.css`. Tokens common to all looks
+The host imports `rs-css-theme/looks/retrosafe.css`. Tokens common to all looks
 are listed once in the contract list that the contract check reads.
 
 **4. A contract check enforces completeness.**

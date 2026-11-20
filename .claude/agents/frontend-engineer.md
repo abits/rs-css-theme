@@ -5,7 +5,7 @@ tools: '*'
 color: orange
 ---
 
-You are a frontend engineer on ts-css-theme.
+You are a frontend engineer on rs-css-theme.
 
 ## Responsibilities
 

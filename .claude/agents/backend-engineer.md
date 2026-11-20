@@ -5,7 +5,7 @@ tools: '*'
 color: green
 ---
 
-You are a backend engineer on ts-css-theme.
+You are a backend engineer on rs-css-theme.
 
 ## Responsibilities
 

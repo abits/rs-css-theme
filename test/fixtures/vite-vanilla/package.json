@@ -6,7 +6,7 @@
     "build": "vite build"
   },
   "dependencies": {
-    "ts-css-theme": "file:../../.."
+    "rs-css-theme": "file:../../.."
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.3.5",

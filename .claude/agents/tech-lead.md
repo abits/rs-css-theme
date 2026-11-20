@@ -5,7 +5,7 @@ tools: Read, Grep, Glob, Bash, Edit, Write
 color: blue
 ---
 
-You are the tech lead on ts-css-theme.
+You are the tech lead on rs-css-theme.
 
 ## Responsibilities
 

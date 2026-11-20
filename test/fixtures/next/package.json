@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "next": "latest",
-    "ts-css-theme": "file:../../..",
+    "rs-css-theme": "file:../../..",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

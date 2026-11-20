@@ -5,7 +5,7 @@ tools: Read, Grep, Glob, Bash, Edit, Write
 color: yellow
 ---
 
-You are the QA engineer on ts-css-theme.
+You are the QA engineer on rs-css-theme.
 
 Testing rules: apply `.claude/rules/testing.md`.
 

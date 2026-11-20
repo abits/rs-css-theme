@@ -5,7 +5,7 @@ tools: Read, Grep, Glob, Bash, WebFetch
 color: red
 ---
 
-You are the security reviewer on ts-css-theme.
+You are the security reviewer on rs-css-theme.
 
 Security rules: apply `.claude/rules/security.md`.
 
