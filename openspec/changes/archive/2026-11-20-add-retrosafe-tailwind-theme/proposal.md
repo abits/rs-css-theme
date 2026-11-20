@@ -2,7 +2,7 @@
 
 ## Why
 
-We want to style websites with the look of retrosafe without rebuilding it
+We want to style websites with the retrosafe look without rebuilding it
 per framework. Our sites use Vue, React, AlpineJS, Nuxt and Next, and all of
 them can run Tailwind v4, so Tailwind's CSS-first theme variables are a
 common ground. The earlier framing as a Nuxt Layer for Nuxt UI no longer
@@ -16,7 +16,7 @@ fits the goal.
   CSS file that implements the contract completely, and the host swaps looks
   by changing one import line.
 - Ship the retrosafe look as the first look, with a light and a dark mode.
-  The reference site has no dark mode, so the dark values are designed.
+  The look has no native dark mode, so the dark values are designed.
 - Select the mode through `color-scheme` and `light-dark()`, so the package
   ships no mode selectors and the host stays in control. Evergreen browsers
   only.

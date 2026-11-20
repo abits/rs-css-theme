@@ -3,14 +3,13 @@
 ## Purpose
 
 Provides the retrosafe look as the first look of the package: its palette,
-square corners and typography, with a designed dark mode, for sites that
-should resemble the reference site.
+square corners and typography, with a designed dark mode, for retro-styled sites.
 
 ## ADDED Requirements
 
-### Requirement: Light palette matches the reference
+### Requirement: Light palette
 
-In light mode the retrosafe look SHALL use the reference palette: background `#fefefe`, foreground `#1e1e1e`, accent `#f386a1` and accent-foreground `#1e1e1e`.
+In light mode the retrosafe look SHALL use this palette: background `#fefefe`, foreground `#1e1e1e`, accent `#f386a1` and accent-foreground `#1e1e1e`.
 
 #### Scenario: Light mode colors
 
@@ -19,7 +18,7 @@ In light mode the retrosafe look SHALL use the reference palette: background `#f
 
 ### Requirement: Dark mode is designed
 
-In dark mode the retrosafe look SHALL use `#1e1e1e` as background and `#fefefe` as foreground and SHALL keep the accent hue. The reference has no dark mode, so these values are a design decision of this look and are not extracted from the site.
+In dark mode the retrosafe look SHALL use `#1e1e1e` as background and `#fefefe` as foreground and SHALL keep the accent hue. The look has no native dark mode, so these values are a design decision of this look.
 
 #### Scenario: Dark mode colors
 
@@ -46,7 +45,7 @@ The retrosafe look SHALL use no radius larger than 4px. The `sm` radius SHALL be
 
 ### Requirement: Free default fonts
 
-The retrosafe look SHALL set `sans` to Inter and `mono` to JetBrains Mono. It SHALL NOT ship or reference the commercially licensed font of the reference site.
+The retrosafe look SHALL set `sans` to Inter and `mono` to JetBrains Mono. It SHALL NOT ship or reference a commercially licensed font.
 
 #### Scenario: Font families
 
