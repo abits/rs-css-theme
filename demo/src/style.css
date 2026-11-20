@@ -5,6 +5,11 @@
 :root[data-mode="light"] { color-scheme: light; }
 :root[data-mode="dark"] { color-scheme: dark; }
 
+/* Demo-only color: the live window body grey (#c4c4c4) has no token in the look. */
+@theme {
+  --color-window: light-dark(#c4c4c4, #3d3d3d);
+}
+
 /* Demo-only pieces the look leaves out on purpose: the pastel hero gradient. */
 .hero-gradient {
   background: linear-gradient(
