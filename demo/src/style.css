@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "ts-css-theme/looks/typesafe.css";
+
+:root { color-scheme: light dark; }
+:root[data-mode="light"] { color-scheme: light; }
+:root[data-mode="dark"] { color-scheme: dark; }
