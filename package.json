@@ -1,6 +1,6 @@
 {
   "name": "ts-css-theme",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Swappable looks for Tailwind v4 sites, starting with the retrosafe look.",
   "type": "module",
   "license": "UNLICENSED",
