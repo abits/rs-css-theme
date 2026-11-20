@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ts-css-theme demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body class="bg-background text-foreground font-sans antialiased">
+    <header class="border-b border-border">
+      <div class="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
+        <span class="font-mono text-sm">ts-css-theme</span>
+        <div class="flex border border-border font-mono text-sm" role="group" aria-label="Color mode">
+          <button data-set-mode="light" aria-pressed="false" class="px-3 py-1 aria-pressed:bg-accent aria-pressed:text-accent-foreground">light</button>
+          <button data-set-mode="dark" aria-pressed="false" class="border-x border-border px-3 py-1 aria-pressed:bg-accent aria-pressed:text-accent-foreground">dark</button>
+          <button data-set-mode="system" aria-pressed="true" class="px-3 py-1 aria-pressed:bg-accent aria-pressed:text-accent-foreground">system</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-4xl space-y-12 px-4 py-12">
+      <section class="space-y-4">
+        <h1 class="text-4xl font-semibold tracking-tight">Swappable looks for Tailwind v4</h1>
+        <p class="max-w-2xl text-muted">One CSS import gives your site the retrosafe look in light and dark mode. No JavaScript, no plugin, no framework.</p>
+        <div class="flex gap-3">
+          <a href="#install" class="rounded-md bg-accent px-4 py-2 font-semibold text-accent-foreground">Install</a>
+          <a href="#tokens" class="rounded-md border border-border px-4 py-2">See the tokens</a>
+        </div>
+      </section>
+
+      <section id="install" class="space-y-3">
+        <h2 class="text-2xl font-semibold">One import</h2>
+        <pre class="overflow-x-auto rounded-lg border border-border p-4 font-mono text-sm">@import "tailwindcss";
+@import "ts-css-theme/looks/retrosafe.css";</pre>
+      </section>
+
+      <section id="tokens" class="space-y-3">
+        <h2 class="text-2xl font-semibold">Colors</h2>
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div class="rounded-lg border border-border p-4"><div class="mb-3 h-10 border border-border bg-background"></div><p class="font-mono text-sm">background</p></div>
+          <div class="rounded-lg border border-border p-4"><div class="mb-3 h-10 bg-foreground"></div><p class="font-mono text-sm">foreground</p></div>
+          <div class="rounded-lg border border-border p-4"><div class="mb-3 h-10 bg-muted"></div><p class="font-mono text-sm">muted</p></div>
+          <div class="rounded-lg border border-border p-4"><div class="mb-3 h-10 bg-border"></div><p class="font-mono text-sm">border</p></div>
+          <div class="rounded-lg border border-border p-4"><div class="mb-3 h-10 bg-accent"></div><p class="font-mono text-sm">accent</p></div>
+          <div class="rounded-lg border border-border p-4"><div class="mb-3 h-10 border border-border bg-accent-foreground"></div><p class="font-mono text-sm">accent-foreground</p></div>
+        </div>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-2xl font-semibold">Radii</h2>
+        <div class="flex flex-wrap gap-3 font-mono text-sm">
+          <span class="rounded-sm border border-border px-4 py-2">rounded-sm</span>
+          <span class="rounded-md border border-border px-4 py-2">rounded-md</span>
+          <span class="rounded-lg border border-border px-4 py-2">rounded-lg</span>
+        </div>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-2xl font-semibold">Form</h2>
+        <form class="grid max-w-md gap-3" onsubmit="return false">
+          <label class="grid gap-1 text-sm">Email<input type="email" placeholder="you@example.com" class="rounded-md border border-border bg-background px-3 py-2" /></label>
+          <button class="rounded-md bg-accent px-4 py-2 font-semibold text-accent-foreground">Subscribe</button>
+          <p class="text-sm text-muted">Demo only, nothing is sent.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="border-t border-border">
+      <p class="mx-auto max-w-4xl px-4 py-6 font-mono text-sm text-muted">ts-css-theme v0.1.0</p>
+    </footer>
+  </body>
+</html>

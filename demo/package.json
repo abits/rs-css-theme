@@ -1,0 +1,8 @@
+{
+  "name": "ts-css-theme-demo",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "vite", "build": "vite build" },
+  "dependencies": { "ts-css-theme": "file:.." },
+  "devDependencies": { "@tailwindcss/vite": "4.3.5", "tailwindcss": "4.3.5", "vite": "8.3.8" }
+}
