@@ -1,10 +1,10 @@
 # ts-css-theme
 
-Swappable looks for Tailwind v4 sites. The first look reproduces retrosafe, with a light and a dark mode. The package is plain CSS: no JavaScript, no plugin and no framework dependency beyond Tailwind v4. It works with Vue, React, AlpineJS, Nuxt and Next.
+Swappable looks for Tailwind v4 sites. The first look, retrosafe, has a light and a dark mode. The package is plain CSS: no JavaScript, no plugin and no framework dependency beyond Tailwind v4. It works with Vue, React, AlpineJS, Nuxt and Next.
 
 ## What's new — v0.1.0
 
-- The `retrosafe` look reproduces retrosafe in light and dark mode, with square corners and Inter and JetBrains Mono as the default fonts.
+- The `retrosafe` look has a light and a dark mode, with square corners and Inter and JetBrains Mono as the default fonts.
 - Hosts swap looks with one CSS import, and the mode follows the host's `color-scheme` through `light-dark()`.
 - Every look must define each token of `contract.json`, and `npm test` checks the contract, text contrast, radii and fonts.
 - Vue, React, AlpineJS, Nuxt and Next are verified in Chromium; hosts must raise their CSS build target, as the README explains.
