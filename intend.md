@@ -56,8 +56,12 @@ theme toggle. Its dark values therefore do not exist and must be designed.
   Only colors depend on the mode; radius, fonts and tracking are the same in
   both.
 - Evergreen browsers only; legacy browsers are not supported. The baseline is
-  the first versions with `light-dark()` support, roughly Chrome 123,
-  Firefox 120 and Safari 17.5 (to be confirmed before it is fixed in a spec).
+  the first versions with `light-dark()` support: Chrome 123, Edge 123,
+  Firefox 120 and Safari 17.5 (MDN browser compatibility data).
+- The host must raise its CSS build target to that baseline. Vite, Nuxt and
+  Next minify CSS for older default targets and rewrite `light-dark()` into a
+  fallback that renders no colors, so the swap by one import line needs this
+  one-time host setting.
 - The fonts of the reference look may be commercially licensed. The default
   uses free fonts (Inter, JetBrains Mono); the original font is left to the
   host.
@@ -70,24 +74,30 @@ theme toggle. Its dark values therefore do not exist and must be designed.
 - Nuxt UI and other component libraries with their own variable systems.
 - Tailwind Plus snippets (hardcoded palettes, separate license).
 
+## Decisions
+
+Verified in prototypes with the five host fixtures (see the OpenSpec change
+`add-typesafe-tailwind-theme`):
+
+- `light-dark()` works directly inside `@theme`. The two-layer pattern of raw
+  variables plus `@theme inline` is not needed.
+- The token contract lives directly in Tailwind's namespaces (`--color-*`,
+  `--radius-*`, `--font-*`).
+- `@import` of a package CSS file resolves in Vite (Vue, React, AlpineJS),
+  Nuxt and Next with PostCSS, when the package is a copy in `node_modules`
+  with `exports` for `looks/*.css`.
+- The look sets no `color-scheme` default. The host opts in, and the README
+  documents how.
+- The package ships no font files in the first version. The host loads Inter
+  and JetBrains Mono.
+
 ## Open questions
 
 - Is the inverted-neutrals approach for the dark mode acceptable, or should
   it get its own palette (for example a slightly warm dark grey)?
 - Do subpages of the reference (docs, console) differ from the first
   viewport? Only the landing page was rendered.
-- Does `light-dark()` work directly inside `@theme` (for example
-  `--color-background: light-dark(#fefefe, #1e1e1e)`) without the two-layer
-  pattern of raw variables plus `@theme inline`? Verify in a prototype; the
-  Tailwind docs only show the two-layer pattern.
-- Does the look file set `:root { color-scheme: light dark }` as a default,
-  or does the host always opt in? Without it, a site stays light until the
-  host acts.
-- Should the token contract live directly in Tailwind's namespaces
-  (`--color-*`, `--radius-*`, `--font-*`), or in a separate `--ts-*`
-  namespace mapped onto them? The direct form is preferred if the
-  `light-dark()` check above holds.
-- Who ships the font files: the package (`@font-face` for free fonts) or the
-  host?
-- Verify that `@import` of a package CSS file resolves in all five host
-  build setups (Vite, Nuxt, Next with PostCSS, Alpine via Vite or CLI).
+- Should the package guard against a missing host CSS target, so that the
+  failure is not silent (transparent colors without an error)?
+- Do the two decisions on the `color-scheme` default and on fonts hold? Both
+  were proposed in the design and not yet confirmed.
