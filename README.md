@@ -61,7 +61,7 @@ Next, in `package.json`:
 
 ### Fonts
 
-The typesafe look sets `Inter` for `font-sans` and `JetBrains Mono` for `font-mono`, each with a generic fallback. The package ships no font files. Load both families in the way your host prefers, for example with a `<link>` to a font provider or a self-hosted `@font-face`, and use these exact family names.
+The typesafe look sets `Inter` for `font-sans` and `JetBrains Mono` for `font-mono`, each with a generic fallback. The package ships no font files. Load both families in the way your host prefers, for example with a `<link>` to a font provider or a self-hosted `@font-face`, and use these exact family names. The demo in `demo/` self-hosts both through the `@fontsource/inter` and `@fontsource/jetbrains-mono` packages.
 
 ### Browser support
 
