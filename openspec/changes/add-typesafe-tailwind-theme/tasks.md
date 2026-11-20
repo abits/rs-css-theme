@@ -10,11 +10,11 @@
 
 ## 2. Package and look
 
-- [ ] 2.1 Create `package.json` with `exports` for `looks/*.css`, no dependencies and no scripts that ship to hosts, and verify `npm pack --dry-run` lists only CSS files and documentation
-- [ ] 2.2 Write the contract list (colors, radii, font families) and a contract check that fails on a missing token or mode value, and verify its tests cover a complete look and a look missing one token
-- [ ] 2.3 Implement `looks/typesafe.css` with the palette, radii and font families from the `typesafe-look` spec, and verify the contract check accepts it
-- [ ] 2.4 Add a contrast test that computes the WCAG ratio for each text pairing in both modes, and verify it passes for the look and fails for a fixture with a low-contrast muted color
-- [ ] 2.5 Add a test for radius (none above 4px, `sm` is 0) and font families (Inter, JetBrains Mono, generic fallbacks), and verify it passes for the look
+- [x] 2.1 Create `package.json` with `exports` for `looks/*.css`, no dependencies and no scripts that ship to hosts, and verify `npm pack --dry-run` lists only CSS files and documentation
+- [x] 2.2 Write the contract list (colors, radii, font families) and a contract check that fails on a missing token or mode value, and verify its tests cover a complete look and a look missing one token
+- [x] 2.3 Implement `looks/typesafe.css` with the palette, radii and font families from the `typesafe-look` spec, and verify the contract check accepts it
+- [x] 2.4 Add a contrast test that computes the WCAG ratio for each text pairing in both modes, and verify it passes for the look and fails for a fixture with a low-contrast muted color
+- [x] 2.5 Add a test for radius (none above 4px, `sm` is 0) and font families (Inter, JetBrains Mono, generic fallbacks), and verify it passes for the look
 
 ## 3. Host verification
 

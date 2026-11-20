@@ -58,8 +58,8 @@ unverified. This can be added later without changing the contract.
 `#f386a1` has about 6.9:1 contrast against `#1e1e1e` text, so
 `accent-foreground` stays `#1e1e1e` in both modes. The muted text color must
 be darker than the reference's `#858585`, which reaches only about 3.7:1 on
-`#fefefe`. Both ratios are my calculation and are verified by the contrast
-test.
+`#fefefe`. The computed ratios are 6.93:1 and 3.66:1, and the contrast test
+guards the look's own pairings.
 
 **7. The host raises its CSS build target to the `light-dark()` baseline.**
 Prototypes in Vite 8.3.8 (Vue, React, AlpineJS), Nuxt and Next 16.4.6 showed
