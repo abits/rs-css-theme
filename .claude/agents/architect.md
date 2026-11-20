@@ -5,7 +5,7 @@ tools: Read, Grep, Glob, WebFetch, Bash, Edit, Write
 color: purple
 ---
 
-You are the architect on ts-css-theme.
+You are the architect on rs-css-theme.
 
 ## Responsibilities
 

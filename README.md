@@ -1,12 +1,11 @@
-# ts-css-theme
+# rs-css-theme
 
 Swappable looks for Tailwind v4 sites. The first look, retrosafe, has a light and a dark mode. The package is plain CSS: no JavaScript, no plugin and no framework dependency beyond Tailwind v4. It works with Vue, React, AlpineJS, Nuxt and Next.
 
-## What's new — v0.2.0
+## What's new — v0.3.0
 
-- A demo site in `demo/` shows the look in light and dark mode on a retro window layout, with Lorem ipsum text and self-hosted fonts.
-- The README explains how to preview a look locally through the demo and how to install a release from its git tag with npm 12.
-- The `vite-vanilla` host fixture now runs against the real look, and every fixture lockfile installs cleanly with `npm ci --install-links`.
+- The package is renamed `rs-css-theme`: install it from `github:abits/rs-css-theme` and change imports from `ts-css-theme/looks/retrosafe.css` to `rs-css-theme/looks/retrosafe.css`.
+- The repository moved to `abits/rs-css-theme`, and GitHub redirects the old address.
 
 Earlier releases: see [CHANGELOG.md](CHANGELOG.md).
 
@@ -16,18 +15,18 @@ Earlier releases: see [CHANGELOG.md](CHANGELOG.md).
 
 The package is not published to npm. Install a release from its git tag, which needs read access to the GitHub repository:
 
-    npm install --allow-git=root github:abits/ts-css-theme#v0.2.0
+    npm install --allow-git=root github:abits/rs-css-theme#v0.3.0
 
 npm 12 and later block git dependencies unless you pass `--allow-git`. To work on the package itself, depend on a local checkout instead:
 
-    npm install --install-links file:../ts-css-theme
+    npm install --install-links file:../rs-css-theme
 
 ### Import a look
 
 Import the look in your Tailwind v4 entry stylesheet:
 
     @import "tailwindcss";
-    @import "ts-css-theme/looks/retrosafe.css";
+    @import "rs-css-theme/looks/retrosafe.css";
 
 Then use the contract utilities: `bg-background`, `text-foreground`, `text-muted`, `border-border`, `bg-accent`, `text-accent-foreground`, `rounded-sm`, `rounded-md`, `rounded-lg`, `font-sans` and `font-mono`. To switch to another look, replace the import line with the import of that look.
 

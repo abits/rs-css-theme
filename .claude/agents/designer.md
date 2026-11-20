@@ -5,7 +5,7 @@ tools: Read, Grep, Glob, WebFetch, Edit, Write
 color: cyan
 ---
 
-You are the designer on ts-css-theme.
+You are the designer on rs-css-theme.
 
 ## Responsibilities
 

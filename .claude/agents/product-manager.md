@@ -5,7 +5,7 @@ tools: Read, Grep, Glob, WebFetch, WebSearch, Edit, Write
 color: blue
 ---
 
-You are the product manager on ts-css-theme.
+You are the product manager on rs-css-theme.
 
 ## Responsibilities
 

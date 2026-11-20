@@ -1,5 +1,5 @@
 {
-  "name": "ts-css-theme-demo",
+  "name": "rs-css-theme-demo",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,7 +9,7 @@
   "dependencies": {
     "@fontsource/inter": "^5.3.0",
     "@fontsource/jetbrains-mono": "^5.3.0",
-    "ts-css-theme": "file:.."
+    "rs-css-theme": "file:.."
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.3.5",

@@ -5,7 +5,7 @@ tools: '*'
 color: pink
 ---
 
-You are the DevOps engineer on ts-css-theme.
+You are the DevOps engineer on rs-css-theme.
 
 ## Responsibilities
 

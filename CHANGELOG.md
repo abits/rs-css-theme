@@ -1,6 +1,13 @@
 # Changelog
 
-All releases of ts-css-theme, newest first. Each entry links its GitHub release page.
+All releases of rs-css-theme, newest first. Each entry links its GitHub release page.
+
+## v0.3.0 — 2026-11-20
+
+Release: <https://github.com/abits/rs-css-theme/releases/tag/v0.3.0>
+
+- The package is renamed `rs-css-theme`: install it from `github:abits/rs-css-theme` and change imports from `ts-css-theme/looks/retrosafe.css` to `rs-css-theme/looks/retrosafe.css`.
+- The repository moved to `abits/rs-css-theme`, and GitHub redirects the old address.
 
 ## v0.2.0 — 2026-11-20
 

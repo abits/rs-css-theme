@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-**ts-css-theme** — Framework-neutral, plain-CSS package of swappable looks for Tailwind v4 sites. The first look, `retrosafe`, has a light and a dark mode. Supported hosts: Vue, React, AlpineJS, Nuxt and Next.
+**rs-css-theme** — Framework-neutral, plain-CSS package of swappable looks for Tailwind v4 sites. The first look, `retrosafe`, has a light and a dark mode. Supported hosts: Vue, React, AlpineJS, Nuxt and Next.
 
 Read `intend.md` for the current problem, goals, and constraints. Requirements and tech decisions are drafted via OpenSpec (`/opsx:explore` inside Claude Code); the outputs live under `openspec/`.
 
