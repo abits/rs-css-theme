@@ -103,6 +103,18 @@ Each synced issue carries a `<!-- viber-task-id: … -->` fingerprint plus the l
     make repo-init      # first-time GitHub repo creation + push
     make sync-issues    # openspec/tasks.md → GitHub Issues
 
+## Preview a look locally
+
+`demo/` is a small Vite and Tailwind v4 page that imports the look and shows its colors, radii and a form. A toggle in the header switches between light, dark and system mode.
+
+    cd demo
+    npm install --no-package-lock
+    npm run dev
+
+Open the address Vite prints, usually `http://localhost:5173/`. A plain `npm install` links the package to your checkout, so saving a change to a file in `looks/` updates the open page without a reload. Do not add `--install-links` here, because that copies the package and the page then shows the old copy. `--no-package-lock` keeps the symlink out of `demo/package-lock.json`.
+
+To preview another look, change the second `@import` in `demo/src/style.css` to that look's file. `npm run build` writes a static copy to `demo/dist`.
+
 ## Host fixtures
 
 `test/fixtures/` holds one minimal project per host (`vite-vue`, `vite-react`, `vite-alpine`, `nuxt`, `next`). After `npm install --install-links` inside a fixture, check it in Chromium with `ONLY_RAISED=1 test/support/check-vite-fixture.sh test/fixtures/vite-vue`. Nuxt and Next use `test/support/check-fixture.sh`; its header comment lists the arguments. Without `ONLY_RAISED=1` the script also builds with the host's default target, which is expected to fail.
