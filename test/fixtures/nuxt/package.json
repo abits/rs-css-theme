@@ -1,4 +1,4 @@
 { "name": "fixture-nuxt", "private": true, "type": "module",
   "scripts": { "build": "nuxt generate" },
-  "dependencies": { "nuxt": "latest", "proto-look": "file:../proto-look", "vue": "latest" },
+  "dependencies": { "nuxt": "latest", "ts-css-theme": "file:../../..", "vue": "latest" },
   "devDependencies": { "@tailwindcss/vite": "4.3.5", "tailwindcss": "4.3.5" } }

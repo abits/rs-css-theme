@@ -7,6 +7,7 @@ dir="$1"; support="$(cd "$(dirname "$0")" && pwd)"; status=0
 cd "$dir" || exit 2
 for case in "default:" "raised:chrome123,safari17.5,firefox120"; do
   label="${case%%:*}"; target="${case#*:}"
+  [ "${ONLY_RAISED:-}" = 1 ] && [ "$label" = default ] && continue
   CSS_TARGET="$target" npx vite build >/dev/null 2>&1 || { echo "BUILD FAIL ($label)"; status=1; continue; }
   python3 -m http.server 4173 --directory dist >/dev/null 2>&1 & server=$!
   sleep 1

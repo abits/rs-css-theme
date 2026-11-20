@@ -18,7 +18,7 @@
 
 ## 3. Host verification
 
-- [ ] 3.1 Run the host fixtures from 1.3 and 1.4 against the real look and verify in Chromium that background, foreground, accent, radius and font utilities resolve to the look's values in light, dark and system mode, with the host CSS target raised as the fixtures do
+- [x] 3.1 Run the host fixtures from 1.3 and 1.4 against the real look and verify in Chromium that background, foreground, accent, radius and font utilities resolve to the look's values in light, dark and system mode, with the host CSS target raised as the fixtures do
 
 ## 4. Documentation and repository
 
