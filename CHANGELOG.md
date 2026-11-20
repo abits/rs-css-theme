@@ -2,6 +2,14 @@
 
 All releases of ts-css-theme, newest first. Each entry links its GitHub release page.
 
+## v0.2.0 — 2026-11-20
+
+Release: <https://github.com/abits/ts-css-theme/releases/tag/v0.2.0>
+
+- A demo site in `demo/` shows the look in light and dark mode on a retro window layout, with Lorem ipsum text and self-hosted fonts.
+- The README explains how to preview a look locally through the demo and how to install a release from its git tag with npm 12.
+- The `vite-vanilla` host fixture now runs against the real look, and every fixture lockfile installs cleanly with `npm ci --install-links`.
+
 ## v0.1.0 — 2026-11-20
 
 Release: <https://github.com/abits/ts-css-theme/releases/tag/v0.1.0>

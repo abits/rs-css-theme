@@ -2,12 +2,11 @@
 
 Swappable looks for Tailwind v4 sites. The first look, retrosafe, has a light and a dark mode. The package is plain CSS: no JavaScript, no plugin and no framework dependency beyond Tailwind v4. It works with Vue, React, AlpineJS, Nuxt and Next.
 
-## What's new — v0.1.0
+## What's new — v0.2.0
 
-- The `retrosafe` look has a light and a dark mode, with square corners and Inter and JetBrains Mono as the default fonts.
-- Hosts swap looks with one CSS import, and the mode follows the host's `color-scheme` through `light-dark()`.
-- Every look must define each token of `contract.json`, and `npm test` checks the contract, text contrast, radii and fonts.
-- Vue, React, AlpineJS, Nuxt and Next are verified in Chromium; hosts must raise their CSS build target, as the README explains.
+- A demo site in `demo/` shows the look in light and dark mode on a retro window layout, with Lorem ipsum text and self-hosted fonts.
+- The README explains how to preview a look locally through the demo and how to install a release from its git tag with npm 12.
+- The `vite-vanilla` host fixture now runs against the real look, and every fixture lockfile installs cleanly with `npm ci --install-links`.
 
 Earlier releases: see [CHANGELOG.md](CHANGELOG.md).
 
@@ -17,7 +16,7 @@ Earlier releases: see [CHANGELOG.md](CHANGELOG.md).
 
 The package is not published to npm. Install a release from its git tag, which needs read access to the GitHub repository:
 
-    npm install --allow-git=root github:abits/ts-css-theme#v0.1.0
+    npm install --allow-git=root github:abits/ts-css-theme#v0.2.0
 
 npm 12 and later block git dependencies unless you pass `--allow-git`. To work on the package itself, depend on a local checkout instead:
 
