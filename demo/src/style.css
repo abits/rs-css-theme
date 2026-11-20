@@ -4,3 +4,13 @@
 :root { color-scheme: light dark; }
 :root[data-mode="light"] { color-scheme: light; }
 :root[data-mode="dark"] { color-scheme: dark; }
+
+/* Demo-only pieces the look leaves out on purpose: the pastel hero gradient. */
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--color-accent) 40%, var(--color-background)),
+    color-mix(in oklab, #7aa7ff 28%, var(--color-background)) 55%,
+    color-mix(in oklab, #d45bb6 32%, var(--color-background))
+  );
+}

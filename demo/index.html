@@ -7,66 +7,260 @@
     <script type="module" src="./src/main.js"></script>
   </head>
   <body class="bg-background text-foreground font-sans antialiased">
-    <header class="border-b border-border">
-      <div class="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
-        <span class="font-mono text-sm">ts-css-theme</span>
-        <div class="flex border border-border font-mono text-sm" role="group" aria-label="Color mode">
+    <!-- Mode switch: a demo control, not part of the layout being reproduced. -->
+    <div class="border-b border-border bg-border/40">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-1.5 font-mono text-xs">
+        <span class="text-muted">color-scheme</span>
+        <div class="flex border border-border" role="group" aria-label="Color mode">
           <button data-set-mode="light" aria-pressed="false" class="px-3 py-1 aria-pressed:bg-accent aria-pressed:text-accent-foreground">light</button>
           <button data-set-mode="dark" aria-pressed="false" class="border-x border-border px-3 py-1 aria-pressed:bg-accent aria-pressed:text-accent-foreground">dark</button>
           <button data-set-mode="system" aria-pressed="true" class="px-3 py-1 aria-pressed:bg-accent aria-pressed:text-accent-foreground">system</button>
         </div>
       </div>
+    </div>
+
+    <!-- Header: wordmark, square nav chips, black button -->
+    <header class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4">
+      <a href="#top" class="font-semibold tracking-tight">Lorem Ipsum</a>
+      <nav class="flex flex-wrap gap-2 font-mono text-sm" aria-label="Main">
+        <a href="#top" class="border border-border bg-background px-3 py-1">Lorem</a>
+        <a href="#top" class="border border-border bg-background px-3 py-1">Ipsum</a>
+        <a href="#top" class="border border-border bg-background px-3 py-1">Dolor</a>
+        <a href="#top" class="border border-border bg-background px-3 py-1">Sit amet</a>
+      </nav>
+      <a href="#top" class="bg-foreground px-4 py-1.5 font-mono text-sm text-background">Consectetur</a>
     </header>
 
-    <main class="mx-auto max-w-4xl space-y-12 px-4 py-12">
-      <section class="space-y-4">
-        <h1 class="text-4xl font-semibold tracking-tight">Swappable looks for Tailwind v4</h1>
-        <p class="max-w-2xl text-muted">One CSS import gives your site the retrosafe look in light and dark mode. No JavaScript, no plugin, no framework.</p>
-        <div class="flex gap-3">
-          <a href="#install" class="rounded-md bg-accent px-4 py-2 font-semibold text-accent-foreground">Install</a>
-          <a href="#tokens" class="rounded-md border border-border px-4 py-2">See the tokens</a>
+    <main id="top">
+      <!-- Hero: pastel gradient with a desktop of titled windows -->
+      <section class="hero-gradient border-y border-border">
+        <div class="mx-auto max-w-6xl px-4 py-16">
+          <div class="relative mb-12 max-w-3xl">
+            <span class="absolute -top-6 left-0 font-mono text-2xl text-muted" aria-hidden="true">#</span>
+            <p class="mb-3 font-mono text-sm">LOR.EM.0S1</p>
+            <h1 class="text-5xl font-semibold leading-tight tracking-tight">Lorem ipsum dolor sit amet consectetur</h1>
+            <span class="absolute -bottom-8 right-0 font-mono text-2xl text-muted" aria-hidden="true">#</span>
+          </div>
+
+          <div class="grid gap-4 md:grid-cols-3">
+            <div class="border border-foreground bg-border">
+              <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">Lorem Tool 1.1</div>
+              <div class="space-y-1 p-4 font-mono text-sm">
+                <p>00 / 00 / 0000</p>
+                <p class="text-3xl">00:00</p>
+              </div>
+            </div>
+
+            <div class="border border-foreground bg-border">
+              <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">Ipsum 1.1</div>
+              <div class="grid grid-cols-8 gap-px p-4" aria-hidden="true">
+                <span class="aspect-square bg-foreground"></span><span class="aspect-square"></span><span class="aspect-square"></span><span class="aspect-square bg-foreground"></span><span class="aspect-square"></span><span class="aspect-square"></span><span class="aspect-square"></span><span class="aspect-square"></span>
+                <span class="aspect-square"></span><span class="aspect-square bg-foreground"></span><span class="aspect-square bg-foreground"></span><span class="aspect-square"></span><span class="aspect-square"></span><span class="aspect-square bg-foreground"></span><span class="aspect-square"></span><span class="aspect-square"></span>
+                <span class="aspect-square bg-foreground"></span><span class="aspect-square bg-foreground"></span><span class="aspect-square"></span><span class="aspect-square"></span><span class="aspect-square"></span><span class="aspect-square"></span><span class="aspect-square bg-foreground"></span><span class="aspect-square"></span>
+              </div>
+            </div>
+
+            <div class="border border-foreground bg-border">
+              <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">LOREM</div>
+              <div class="space-y-2 p-4 font-mono text-sm">
+                <p class="text-muted">&lt;lorem ipsum&gt;</p>
+                <p>Dolor</p>
+                <p>Sit amet</p>
+              </div>
+            </div>
+
+            <div class="border border-foreground bg-border">
+              <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">IPSUM</div>
+              <div class="space-y-2 p-4 font-mono text-sm">
+                <p class="font-semibold">Lorem ipsum</p>
+                <p class="text-muted">&lt;dolor sit&gt;</p>
+              </div>
+            </div>
+
+            <div class="border border-foreground bg-border">
+              <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">DOLOR</div>
+              <div class="space-y-3 p-4 font-mono text-sm">
+                <p class="font-semibold">Consectetur adipiscing</p>
+                <p class="text-muted">&lt;elit sed&gt;</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="border border-foreground bg-background px-2 py-0.5">lorem</span>
+                  <span class="border border-foreground bg-background px-2 py-0.5">ipsum</span>
+                  <span class="border border-foreground bg-background px-2 py-0.5">dolor</span>
+                  <span class="border border-foreground bg-background px-2 py-0.5">amet</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="border border-foreground bg-border">
+              <div class="flex items-center gap-2 bg-foreground px-2 py-1 font-mono text-xs text-background">
+                <span class="inline-block size-3 bg-accent" aria-hidden="true"></span>SITAMET
+              </div>
+              <div class="space-y-2 p-4">
+                <p class="font-mono text-xs text-muted">01</p>
+                <p class="text-lg font-semibold">Lorem ipsum dolor</p>
+                <p class="font-mono text-sm">sit amet elit</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="install" class="space-y-3">
-        <h2 class="text-2xl font-semibold">One import</h2>
-        <pre class="overflow-x-auto rounded-lg border border-border p-4 font-mono text-sm">@import "tailwindcss";
-@import "ts-css-theme/looks/retrosafe.css";</pre>
-      </section>
+      <div class="mx-auto max-w-6xl space-y-24 px-4 py-24">
+        <!-- Text bento: three grid cards -->
+        <section class="space-y-8">
+          <h2 class="max-w-2xl text-4xl font-semibold tracking-tight">Lorem ipsum dolor sit amet</h2>
+          <div class="grid gap-4 md:grid-cols-3">
+            <article class="space-y-3 border border-border p-6">
+              <p class="font-mono text-sm text-muted">01</p>
+              <h3 class="text-xl font-semibold">Lorem ipsum dolor</h3>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            </article>
+            <article class="space-y-3 border border-border p-6">
+              <p class="font-mono text-sm text-muted">02</p>
+              <h3 class="text-xl font-semibold">Sit amet elit</h3>
+              <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+            </article>
+            <article class="space-y-3 border border-border p-6">
+              <p class="font-mono text-sm text-muted">03</p>
+              <h3 class="text-xl font-semibold">Consectetur</h3>
+              <p class="text-muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+            </article>
+          </div>
+        </section>
 
-      <section id="tokens" class="space-y-3">
-        <h2 class="text-2xl font-semibold">Colors</h2>
-        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
-          <div class="rounded-lg border border-border p-4"><div class="mb-3 h-10 border border-border bg-background"></div><p class="font-mono text-sm">background</p></div>
-          <div class="rounded-lg border border-border p-4"><div class="mb-3 h-10 bg-foreground"></div><p class="font-mono text-sm">foreground</p></div>
-          <div class="rounded-lg border border-border p-4"><div class="mb-3 h-10 bg-muted"></div><p class="font-mono text-sm">muted</p></div>
-          <div class="rounded-lg border border-border p-4"><div class="mb-3 h-10 bg-border"></div><p class="font-mono text-sm">border</p></div>
-          <div class="rounded-lg border border-border p-4"><div class="mb-3 h-10 bg-accent"></div><p class="font-mono text-sm">accent</p></div>
-          <div class="rounded-lg border border-border p-4"><div class="mb-3 h-10 border border-border bg-accent-foreground"></div><p class="font-mono text-sm">accent-foreground</p></div>
-        </div>
-      </section>
+        <!-- Code window -->
+        <section class="border border-foreground bg-border">
+          <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">lorem.ipsum</div>
+          <pre class="overflow-x-auto p-4 font-mono text-sm">lorem ipsum dolor sit amet
+  consectetur adipiscing elit
+  sed do eiusmod tempor
+    incididunt ut labore et dolore
+  magna aliqua ut enim ad minim</pre>
+        </section>
 
-      <section class="space-y-3">
-        <h2 class="text-2xl font-semibold">Radii</h2>
-        <div class="flex flex-wrap gap-3 font-mono text-sm">
-          <span class="rounded-sm border border-border px-4 py-2">rounded-sm</span>
-          <span class="rounded-md border border-border px-4 py-2">rounded-md</span>
-          <span class="rounded-lg border border-border px-4 py-2">rounded-lg</span>
-        </div>
-      </section>
+        <!-- Stat and comparison -->
+        <section class="grid items-center gap-8 md:grid-cols-2">
+          <div class="space-y-4">
+            <h2 class="text-4xl font-semibold tracking-tight">000x Lorem, 000x Ipsum.</h2>
+            <p class="font-mono text-xs text-muted">*lorem ipsum dolor sit amet</p>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#top" class="inline-block border border-foreground px-4 py-2 font-mono text-sm">Lorem ipsum</a>
+          </div>
+          <div class="space-y-4 border border-border p-6 font-mono text-sm">
+            <div class="space-y-1">
+              <p>Lorem Ipsum</p>
+              <div class="h-4 w-[6%] bg-accent"></div>
+              <p class="text-muted">$0.000000 · 0.000s</p>
+            </div>
+            <div class="space-y-1">
+              <p>Dolor</p>
+              <div class="h-4 w-full bg-foreground"></div>
+              <p class="text-muted">$0.000000 · 0.000s</p>
+            </div>
+          </div>
+        </section>
 
-      <section class="space-y-3">
-        <h2 class="text-2xl font-semibold">Form</h2>
-        <form class="grid max-w-md gap-3" onsubmit="return false">
-          <label class="grid gap-1 text-sm">Email<input type="email" placeholder="you@example.com" class="rounded-md border border-border bg-background px-3 py-2" /></label>
-          <button class="rounded-md bg-accent px-4 py-2 font-semibold text-accent-foreground">Subscribe</button>
-          <p class="text-sm text-muted">Demo only, nothing is sent.</p>
-        </form>
-      </section>
+        <!-- Chart and explainer -->
+        <section class="space-y-8">
+          <h2 class="max-w-3xl text-4xl font-semibold tracking-tight">Lorem ipsum dolor sit amet consectetur adipiscing.</h2>
+          <div class="grid gap-4 md:grid-cols-3">
+            <div class="border border-foreground bg-border md:col-span-2">
+              <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">Lorem vs. Ipsum</div>
+              <div class="flex h-56 items-end gap-3 p-4" aria-hidden="true">
+                <span class="h-[20%] flex-1 bg-foreground"></span><span class="h-[35%] flex-1 bg-foreground"></span><span class="h-[30%] flex-1 bg-foreground"></span><span class="h-[55%] flex-1 bg-foreground"></span><span class="h-[95%] flex-1 bg-accent"></span>
+              </div>
+            </div>
+            <div class="space-y-6">
+              <div class="space-y-2 border border-border p-6">
+                <h3 class="font-semibold">Lorem ipsum</h3>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</p>
+              </div>
+              <div class="space-y-2 border border-border p-6">
+                <p class="font-mono text-xs text-muted">Dolor</p>
+                <h3 class="font-semibold">Sit amet elit</h3>
+                <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stat cards -->
+        <section class="grid gap-4 md:grid-cols-2">
+          <div class="space-y-2 border border-foreground bg-border p-6">
+            <p class="font-mono text-xs">Lorem.Ipsum</p>
+            <p class="text-6xl font-semibold">$00</p>
+            <p class="font-mono text-sm">Lorem ipsum dolor sit.</p>
+          </div>
+          <div class="space-y-2 border border-foreground bg-border p-6">
+            <p class="font-mono text-xs">Lorem.Ipsum</p>
+            <p class="text-6xl font-semibold">000x</p>
+            <p class="font-mono text-sm">Consectetur adipiscing elit.</p>
+          </div>
+        </section>
+
+        <!-- Call to action -->
+        <section class="hero-gradient space-y-6 border border-border p-12 text-center">
+          <h2 class="text-4xl font-semibold tracking-tight">Lorem ipsum dolor</h2>
+          <a href="#top" class="inline-block bg-foreground px-6 py-2 font-mono text-sm text-background">Sit amet</a>
+        </section>
+
+        <!-- Blog cards -->
+        <section class="space-y-6">
+          <p class="font-mono text-sm text-muted">Lorem Ipsum</p>
+          <div class="grid gap-4 md:grid-cols-3">
+            <a href="#top" class="space-y-3 border border-border p-6">
+              <span class="border border-border px-2 py-0.5 font-mono text-xs">Lorem</span>
+              <h3 class="text-lg font-semibold">Lorem ipsum dolor sit amet</h3>
+              <p class="text-muted">Consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </a>
+            <a href="#top" class="space-y-3 border border-border p-6">
+              <span class="border border-border px-2 py-0.5 font-mono text-xs">Lorem</span>
+              <h3 class="text-lg font-semibold">Ut enim ad minim veniam</h3>
+              <p class="text-muted">Quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            </a>
+            <a href="#top" class="space-y-3 border border-border p-6">
+              <span class="border border-border px-2 py-0.5 font-mono text-xs">Ipsum</span>
+              <h3 class="text-lg font-semibold">Duis aute irure dolor</h3>
+              <p class="text-muted">In reprehenderit in voluptate velit esse cillum dolore.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- FAQ accordion: first item open -->
+        <section class="space-y-6">
+          <h2 class="text-4xl font-semibold tracking-tight">Lorem ipsum dolor</h2>
+          <div class="divide-y divide-border border border-border">
+            <details name="faq" open class="group p-4">
+              <summary class="flex cursor-pointer items-center justify-between font-semibold">Lorem ipsum dolor sit amet? <span class="font-mono group-open:hidden" aria-hidden="true">+</span><span class="hidden font-mono group-open:inline" aria-hidden="true">-</span></summary>
+              <p class="mt-3 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </details>
+            <details name="faq" class="group p-4"><summary class="flex cursor-pointer items-center justify-between font-semibold">Consectetur adipiscing elit sed? <span class="font-mono group-open:hidden" aria-hidden="true">+</span><span class="hidden font-mono group-open:inline" aria-hidden="true">-</span></summary><p class="mt-3 text-muted">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p></details>
+            <details name="faq" class="group p-4"><summary class="flex cursor-pointer items-center justify-between font-semibold">Eiusmod tempor incididunt ut labore? <span class="font-mono group-open:hidden" aria-hidden="true">+</span><span class="hidden font-mono group-open:inline" aria-hidden="true">-</span></summary><p class="mt-3 text-muted">Duis aute irure dolor in reprehenderit in voluptate velit esse.</p></details>
+            <details name="faq" class="group p-4"><summary class="flex cursor-pointer items-center justify-between font-semibold">Magna aliqua ut enim ad minim? <span class="font-mono group-open:hidden" aria-hidden="true">+</span><span class="hidden font-mono group-open:inline" aria-hidden="true">-</span></summary><p class="mt-3 text-muted">Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p></details>
+            <details name="faq" class="group p-4"><summary class="flex cursor-pointer items-center justify-between font-semibold">Quis nostrud exercitation ullamco? <span class="font-mono group-open:hidden" aria-hidden="true">+</span><span class="hidden font-mono group-open:inline" aria-hidden="true">-</span></summary><p class="mt-3 text-muted">Qui officia deserunt mollit anim id est laborum.</p></details>
+            <details name="faq" class="group p-4"><summary class="flex cursor-pointer items-center justify-between font-semibold">Laboris nisi ut aliquip ex ea? <span class="font-mono group-open:hidden" aria-hidden="true">+</span><span class="hidden font-mono group-open:inline" aria-hidden="true">-</span></summary><p class="mt-3 text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p></details>
+          </div>
+        </section>
+      </div>
     </main>
 
+    <!-- Footer: copyright window and link list -->
     <footer class="border-t border-border">
-      <p class="mx-auto max-w-4xl px-4 py-6 font-mono text-sm text-muted">ts-css-theme v0.1.0</p>
+      <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-2">
+        <div class="border border-foreground bg-border">
+          <div class="bg-foreground px-2 py-1 font-mono text-xs text-background">Lorem Ipsum</div>
+          <p class="p-4 font-mono text-sm">Version 0.00 · Lorem ipsum dolor sit amet. Consectetur adipiscing elit.</p>
+        </div>
+        <div class="space-y-3 font-mono text-sm">
+          <p class="text-muted">Lorem</p>
+          <ul class="space-y-1">
+            <li><a href="#top">Ipsum dolor</a></li>
+            <li><a href="#top">Sit amet</a></li>
+            <li><a href="#top">Consectetur</a></li>
+            <li><a href="#top">Adipiscing</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
