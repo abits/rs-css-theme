@@ -1,9 +1,62 @@
 # ts-css-theme
 
-Nuxt Layer that adds a toggleable retrosafe-style theme to Nuxt UI sites.
+Swappable looks for Tailwind v4 sites. The first look reproduces retrosafe, with a light and a dark mode. The package is plain CSS: no JavaScript, no plugin and no framework dependency beyond Tailwind v4. It works with Vue, React, AlpineJS, Nuxt and Next.
+
+## Usage
+
+### Install
+
+The package is not published to npm yet. Until the first release, depend on a local checkout:
+
+    npm install --install-links file:../ts-css-theme
+
+### Import a look
+
+Import the look in your Tailwind v4 entry stylesheet:
+
+    @import "tailwindcss";
+    @import "ts-css-theme/looks/retrosafe.css";
+
+Then use the contract utilities: `bg-background`, `text-foreground`, `text-muted`, `border-border`, `bg-accent`, `text-accent-foreground`, `rounded-sm`, `rounded-md`, `rounded-lg`, `font-sans` and `font-mono`. To switch to another look, replace the import line with the import of that look.
+
+### Choose the mode
+
+Colors are defined with `light-dark()`, so the mode follows the CSS `color-scheme` of your page. Importing a look does not set it, and without it the page stays light. To follow the system preference:
+
+    :root { color-scheme: light dark; }
+
+Use `color-scheme: light` or `color-scheme: dark` to force a mode. If you switch with a class, set `color-scheme` in the same rule and point Tailwind's `dark` variant at the same class, so theme colors and your own `dark:` utilities stay in sync:
+
+    .dark { color-scheme: dark; }
+    @custom-variant dark (&:where(.dark, .dark *));
+
+### Raise the CSS target of your build
+
+This setting is required. A build that targets browsers older than Chrome 123, Safari 17.5 or Firefox 120 rewrites `light-dark()` into a fallback that renders no colors. The page then shows transparent backgrounds and default text colors, without an error.
+
+Vite (Vue, React, AlpineJS), in `vite.config.js`:
+
+    build: { cssTarget: ['chrome123', 'safari17.5', 'firefox120'] }
+
+Nuxt, in `nuxt.config.ts`:
+
+    vite: { build: { cssTarget: ['chrome123', 'safari17.5', 'firefox120'] } }
+
+Next, in `package.json`:
+
+    "browserslist": ["chrome >= 123", "safari >= 17.5", "firefox >= 120"]
+
+### Fonts
+
+The retrosafe look sets `Inter` for `font-sans` and `JetBrains Mono` for `font-mono`, each with a generic fallback. The package ships no font files. Load both families in the way your host prefers, for example with a `<link>` to a font provider or a self-hosted `@font-face`, and use these exact family names.
+
+### Browser support
+
+`light-dark()` needs Chrome 123, Edge 123, Firefox 120 or Safari 17.5 (MDN browser compatibility data). Older browsers are not supported and get no fallback.
 
 ## Prerequisites
 
+- [Node.js](https://nodejs.org) 22 or newer (for `npm test`)
 - [Claude Code](https://claude.com/claude-code)
 - [OpenSpec](https://github.com/Fission-AI/OpenSpec) — `npm install -g @fission-ai/openspec`
 - [GitHub CLI](https://cli.github.com) — `brew install gh` / `apt install gh`, then `gh auth login` (for `repo-init` and `sync-issues`)
@@ -32,6 +85,11 @@ Each synced issue carries a `<!-- viber-task-id: … -->` fingerprint plus the l
 
 ## Commands
 
+    npm test            # unit checks for looks: contract, contrast, radius, fonts
     make lint-md        # markdown linting
     make repo-init      # first-time GitHub repo creation + push
     make sync-issues    # openspec/tasks.md → GitHub Issues
+
+## Host fixtures
+
+`test/fixtures/` holds one minimal project per host (`vite-vue`, `vite-react`, `vite-alpine`, `nuxt`, `next`). After `npm install --install-links` inside a fixture, check it in Chromium with `ONLY_RAISED=1 test/support/check-vite-fixture.sh test/fixtures/vite-vue`. Nuxt and Next use `test/support/check-fixture.sh`; its header comment lists the arguments. Without `ONLY_RAISED=1` the script also builds with the host's default target, which is expected to fail.

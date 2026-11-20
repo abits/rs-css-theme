@@ -22,9 +22,9 @@
 
 ## 4. Documentation and repository
 
-- [ ] 4.1 Rewrite the project description in `CLAUDE.md` from the Nuxt Layer framing to the framework-neutral Tailwind v4 package, and verify `make lint-md` passes
-- [ ] 4.2 Rewrite `README.md` with installation, the one-line import, setting `color-scheme`, the host CSS target setting (Vite and Nuxt `build.cssTarget`, Next `browserslist`), keeping `color-scheme` and the `dark` variant in sync for class-based hosts, loading the default fonts and the browser baseline, and verify `make lint-md` passes and the documented import works in a fixture
-- [ ] 4.3 Update `intend.md` to move the answered open questions into decisions, and verify `make lint-md` passes
+- [x] 4.1 Rewrite the project description in `CLAUDE.md` from the Nuxt Layer framing to the framework-neutral Tailwind v4 package, and verify `make lint-md` passes
+- [x] 4.2 Rewrite `README.md` with installation, the one-line import, setting `color-scheme`, the host CSS target setting (Vite and Nuxt `build.cssTarget`, Next `browserslist`), keeping `color-scheme` and the `dark` variant in sync for class-based hosts, loading the default fonts and the browser baseline, and verify `make lint-md` passes and the documented import works in a fixture
+- [x] 4.3 Update `intend.md` to move the answered open questions into decisions, and verify `make lint-md` passes
 
 ## Workflow follow-up
 
