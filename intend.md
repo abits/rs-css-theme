@@ -1,22 +1,56 @@
 # Intend: ts-css-theme
 
-<!-- Fill this in before running `/opsx:explore` in Claude Code. -->
-
 ## Problem
 
-We want to style standard websites with the look of the typesafe.ai website.
+We want to style standard websites with the look of the typesafe.ai website
+(a Framer site). The look should be reusable across our projects without
+rebuilding it per framework.
 
-<!-- What problem are you solving? Who has it, and why does it hurt today? -->
+The reference look, as read from its inline CSS (not yet confirmed visually):
+
+- Near-black `#1e1e1e`, off-white `#fefefe`, greys `#dedede` and `#c4c4c4`.
+- Sparse pink and magenta accents (`#f386a1`, `#d45bb6`).
+- Grotesk headings (Die Grotesk C), with Inter, JetBrains Mono and Fragment
+  Mono for body and labels.
+- Mostly square corners (0px, occasionally 4px) and very subtle shadows.
 
 ## Goals
 
-Look can be toggled as theme in a standard frontend framework.
-
-<!-- What outcomes will make this project a success? Be specific and, where possible, measurable. -->
+- A framework-neutral package that applies the typesafe.ai look to
+  Tailwind v4 sites.
+- Supported hosts: Vue, React, AlpineJS, Nuxt and Next.
+- The look is swappable in code: changing one import line replaces it with
+  another look. There is no user-facing toggle.
+- A small, stable token contract (semantic names such as background,
+  foreground, accent, radius, font families). A look is a file that
+  implements the contract completely.
 
 ## Constraints
 
-As framework use tailwind including tailwind ui components. Look is
-implemented as a theme which can be toggled.
+- Tailwind v4 only (CSS-first `@theme`). Tailwind v3 is out of scope.
+- The package is plain CSS, with no JavaScript and no framework dependency.
+  Tailwind is the abstraction layer, because every supported host already
+  integrates it in its own build.
+- A look sets tokens only. Look-specific component CSS is deferred until a
+  concrete look needs it.
+- The fonts of the reference look may be commercially licensed. The default
+  uses free fonts (Inter, JetBrains Mono); the original font is left to the
+  host.
 
-<!-- Tech, timeline, compliance, team size, existing systems to integrate with. -->
+## Out of scope
+
+- Runtime theme switching by the end user (toggle, persistence).
+- Animations and layout of the reference site.
+- Component libraries with their own variable systems (Nuxt UI) and
+  Tailwind Plus snippets, unless a later change adds an adapter.
+
+## Open questions
+
+- Does the reference site have a real dark mode? Confirm with a rendered
+  screenshot.
+- Is Nuxt UI still in scope? If yes, add a thin adapter that maps the tokens
+  to `--ui-*`.
+- Who ships the font files: the package (`@font-face` for free fonts) or the
+  host?
+- Verify that `@import` of a package CSS file resolves in all five host
+  build setups (Vite, Nuxt, Next with PostCSS, Alpine via Vite or CLI).
