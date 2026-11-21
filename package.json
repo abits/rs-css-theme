@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "description": "Swappable looks for Tailwind v4 sites, starting with the retrosafe look.",
   "type": "module",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "files": ["looks"],
   "exports": {
     "./looks/*.css": "./looks/*.css"

@@ -116,3 +116,7 @@ To preview another look, change the second `@import` in `demo/src/style.css` to 
 ## Host fixtures
 
 `test/fixtures/` holds one minimal project per host (`vite-vue`, `vite-react`, `vite-alpine`, `nuxt`, `next`). After `npm install --install-links` inside a fixture, check it in Chromium with `ONLY_RAISED=1 test/support/check-vite-fixture.sh test/fixtures/vite-vue`. Nuxt and Next use `test/support/check-fixture.sh`; its header comment lists the arguments. Without `ONLY_RAISED=1` the script also builds with the host's default target, which is expected to fail.
+
+## License
+
+[MIT](LICENSE). The demo fonts Inter and JetBrains Mono come from Fontsource under the SIL Open Font License 1.1.
