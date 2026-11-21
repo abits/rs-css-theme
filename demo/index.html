@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>rs-css-theme demo</title>
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body class="bg-background font-sans text-foreground antialiased">
+    <header class="border-b border-border">
+      <div class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-3 px-4 py-3">
+        <span class="font-mono text-sm">rs-css-theme</span>
+        <div class="flex rounded-md border border-border font-mono text-xs" role="group" aria-label="Color mode">
+          <button data-set-mode="light" aria-pressed="false" class="px-3 py-1 aria-pressed:bg-accent aria-pressed:text-accent-foreground">light</button>
+          <button data-set-mode="dark" aria-pressed="false" class="border-x border-border px-3 py-1 aria-pressed:bg-accent aria-pressed:text-accent-foreground">dark</button>
+          <button data-set-mode="system" aria-pressed="true" class="px-3 py-1 aria-pressed:bg-accent aria-pressed:text-accent-foreground">system</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-4xl space-y-12 px-4 py-12">
+      <section class="space-y-3">
+        <h1 class="text-4xl font-semibold tracking-tight md:text-5xl">Look preview</h1>
+        <p class="max-w-prose text-muted">Every value on this page comes from a token of the imported look. Swap the look in <code class="font-mono">src/style.css</code> and this page follows.</p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Colors</h2>
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div class="border border-border"><div class="h-16 bg-background"></div><p class="px-2 py-1 font-mono text-xs">background</p></div>
+          <div class="border border-border"><div class="h-16 bg-foreground"></div><p class="px-2 py-1 font-mono text-xs">foreground</p></div>
+          <div class="border border-border"><div class="h-16 bg-muted"></div><p class="px-2 py-1 font-mono text-xs">muted</p></div>
+          <div class="border border-border"><div class="h-16 bg-border"></div><p class="px-2 py-1 font-mono text-xs">border</p></div>
+          <div class="border border-border"><div class="h-16 bg-accent"></div><p class="px-2 py-1 font-mono text-xs">accent</p></div>
+          <div class="border border-border"><div class="h-16 bg-accent-foreground"></div><p class="px-2 py-1 font-mono text-xs">accent-foreground</p></div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Radii</h2>
+        <div class="grid grid-cols-3 gap-3">
+          <div class="rounded-sm border border-border p-4 text-center font-mono text-xs">rounded-sm</div>
+          <div class="rounded-md border border-border p-4 text-center font-mono text-xs">rounded-md</div>
+          <div class="rounded-lg border border-border p-4 text-center font-mono text-xs">rounded-lg</div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Fonts</h2>
+        <p class="font-sans text-lg">font-sans: The quick brown fox jumps over the lazy dog.</p>
+        <p class="font-mono text-lg">font-mono: The quick brown fox jumps over the lazy dog.</p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Form</h2>
+        <form class="max-w-sm space-y-3" onsubmit="return false">
+          <label class="block space-y-1 text-sm">
+            <span>Name</span>
+            <input type="text" class="w-full rounded-md border border-border bg-background px-3 py-2" />
+          </label>
+          <label class="block space-y-1 text-sm">
+            <span>Message</span>
+            <textarea rows="3" class="w-full rounded-md border border-border bg-background px-3 py-2"></textarea>
+          </label>
+          <button type="submit" class="rounded-md bg-accent px-4 py-2 text-accent-foreground">Send</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

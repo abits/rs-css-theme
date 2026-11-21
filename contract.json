@@ -1,0 +1,10 @@
+{
+  "colors": ["background", "foreground", "muted", "border", "accent", "accent-foreground"],
+  "radii": ["sm", "md", "lg"],
+  "fonts": ["sans", "mono"],
+  "textPairings": [
+    ["foreground", "background"],
+    ["muted", "background"],
+    ["accent-foreground", "accent"]
+  ]
+}

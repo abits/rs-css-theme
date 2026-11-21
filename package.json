@@ -1,0 +1,14 @@
+{
+  "name": "rs-css-theme",
+  "version": "0.4.0",
+  "description": "Swappable looks for Tailwind v4 sites, starting with the retrosafe look.",
+  "type": "module",
+  "license": "MIT",
+  "files": ["looks"],
+  "exports": {
+    "./looks/*.css": "./looks/*.css"
+  },
+  "scripts": {
+    "test": "node --test \"test/unit/*.test.mjs\""
+  }
+}

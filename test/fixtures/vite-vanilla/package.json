@@ -1,0 +1,16 @@
+{
+  "name": "fixture-vite-vanilla",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "rs-css-theme": "file:../../.."
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.5",
+    "tailwindcss": "4.3.5",
+    "vite": "8.3.8"
+  }
+}
